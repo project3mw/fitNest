@@ -5,7 +5,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
-import NicCage1 from '../../assets/images/NicCage1.png'
+import arnold from '../../assets/images/arnold.png'
 import { Link } from 'react-router-dom';
 
 const styles = theme => ({
