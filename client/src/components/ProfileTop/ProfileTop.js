@@ -45,7 +45,7 @@ function AutoGridNoWrap(props) {
       <Paper className={classes.paper}>
         <Grid container wrap="nowrap" spacing={2}>
           <Grid item>
-          <Avatar alt="Remy Sharp" src={NicCage1} className={classes.bigAvatar} /> 
+          <Avatar alt="Arnold" src={arnold} className={classes.bigAvatar} /> 
           </Grid>
           <Grid item xs>
           <div className={classes.buttonbox}>
