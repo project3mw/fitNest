@@ -5,6 +5,8 @@ const{ Strategy } = require('passport-local')
 const { Strategy: JWTStrategy,ExtractJwt } = require('passport-jwt')
 const {User} = require('./models')
 const app = express()
+require("dotenv").config()
+
 
 app.use(express.static(join(__dirname, 'public')))
 app.use(express.urlencoded({ extended: true }))
@@ -32,11 +34,11 @@ passport.use(new JWTStrategy({
 
 require('./routes')(app)
 
-require('mongoose').connect('mongodb://localhost/fitNest', { useNewUrlParser: true, useCreateIndex: true, useFindAndModify: true })
-  .then(_ => {
-    console.log("database connected")
-    app.listen(3001, () => console.log('server listening on port: 3001'))
-  })
-  .catch(function(err) {
-  console.log(err.message);
-  });
+require('mongoose').connect(`${process.env.MONGODB_URI}`, { useNewUrlParser: true, useCreateIndex: true, useFindAndModify: true })
+ .then(_ => {
+   console.log("database connected")
+   app.listen(3001, () => console.log('server listening on port: 3001'))
+ })
+ .catch(function(err) {
+ console.log(err.message);
+ });
