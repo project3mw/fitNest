@@ -1,8 +1,10 @@
 module.exports = app => {
 
-    require('./.js')(app)
-    require('./.js')(app)
-    require('./.js')(app)
-    require('./.js')(app)
+    require('./Login.js')(app)
+    require('./FriendList.js')(app)
+    require('./NestList.js')(app)
+    require('./Create.js')(app)
+    require('./WorkoutPlanList.js')(app)
+    require('./Profile.js')(app)
 }
 
