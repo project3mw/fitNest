@@ -36,7 +36,7 @@ const styles = theme => ({
 
 
 
-function AutoGridNoWrap(props) {
+function ProfileTop(props) {
   const { classes } = props;
 
   return (
@@ -50,13 +50,16 @@ function AutoGridNoWrap(props) {
           <Grid item xs>
           <div className={classes.buttonbox}>
 
-          <Button component={ Link } to='/ViewWorkoutPlan' className={classes.button} variant="outlined" className={classes.button}>
+          {/* <Link to = '/WorkoutPlanList'> */}
+          <Button className={classes.button} variant="outlined" className={classes.button}>
            View Workout Plans
-          </Button > 
+          </Button >
+          {/* </Link>  */}
 
-          <Button component={ Link } to='/ViewNests' className={classes.button} variant="outlined" className={classes.button}>
-          View Nests
-          </Button>
+          <Button className={classes.button} variant="outlined" className={classes.button}>View Nests  </Button>
+          
+          
+        
 
           </div>
           </Grid>
@@ -67,8 +70,8 @@ function AutoGridNoWrap(props) {
   );
 }
 
-AutoGridNoWrap.propTypes = {
+ProfileTop.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(AutoGridNoWrap);
+export default withStyles(styles)(ProfileTop);
