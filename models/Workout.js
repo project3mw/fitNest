@@ -19,7 +19,5 @@ module.exports = (Schema, model) => {
       }
   })
 
-  // User.plugin(require('passport-local-mongoose'))
-
   return model('Workout', Workout)
 }
