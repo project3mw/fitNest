@@ -12,7 +12,7 @@ module.exports = (Schema, model) => {
         type: String,
         required: true,
         enum: ['abs','legs','shoulders','back','biceps','chest','triceps','all']
-      }]
+      }],
       goal: {
         type: String,
         required: true
