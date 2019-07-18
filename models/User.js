@@ -7,7 +7,7 @@ module.exports = (Schema, model) => {
             return string.includes("@")
           }, 
           message: 'You Must Enter A Valid Email Address!'
-        }
+        },
         required: true
       },
       name: {
