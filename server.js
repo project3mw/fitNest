@@ -8,7 +8,7 @@ app.use(express.json())
 
 require('./routes')(app)
 
-require('mongoose').connect('mongodb://localhost/fitNestgit', { useNewUrlParser: true, useCreateIndex: true, useFindAndModify: true })
+require('mongoose').connect('mongodb://localhost/FitNest_db', { useNewUrlParser: true, useCreateIndex: true, useFindAndModify: true })
  .then(_ => {
    console.log("database connected")
    app.listen(3001, () => console.log('server listening on port: 3001'))
