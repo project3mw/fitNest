@@ -4,5 +4,5 @@ module.exports = app => {
   require('./nestRoutes.js')(app)
   require('./planRoutes.js')(app)
   require('./postRoutes.js')(app)
-
 }
+
