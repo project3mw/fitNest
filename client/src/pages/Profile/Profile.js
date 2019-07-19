@@ -20,12 +20,13 @@ class Profile extends Component {
             // do i have to define this as a variable above?
             // userid: localStorage.getItem('userLogin'),
             userId: '',
-            occList: []
+            workoutPlanList: [], 
+            nestList: []
     }
     componentWillMount() {
-            Occasion.getSome(1)
+            workoutPlanList.getSome(1)
                     .then(({ data }) => {
-                            this.setState({ occList: data })
+                            this.setState({ workoutPlanList: data })
                     })
     }
 
@@ -33,7 +34,7 @@ class Profile extends Component {
     handleGetOccasions = event => {
             const userId = this.state.userId
             console.log("Here I am!")
-            Occasion.getAll()
+            workoutPlanList.getAll()
     }
 
     handleSelectImage = (type) => {
@@ -69,12 +70,12 @@ class Profile extends Component {
         }
     
 
-    handleDeleteOccasion = (id) => {
+    handleDeleteWorkoutPlan = (id) => {
             console.log('Here I am!')
-            Occasion.deleteOne(id)
+            workoutPlanList.deleteOne(id)
                     .then(({ data }) => {
                             this.setState({
-                                    occList: this.state.occList.filter(occ => occ.id !== id)
+                                workoutPlanList: this.state.workoutPlanList.filter(workoutPlan => workoutPlan.id !== id)
                             })
                     })
     }
@@ -89,12 +90,12 @@ class Profile extends Component {
                                     {/* <OccList /> */}
                                     <BottomNav />
                             </div>
-                            {this.state.isEditing ? <EditForm currentOcc={this.state.currentCard} /> : null}
+                            {this.state.isEditing ? <EditForm currentworkoutPlan={this.state.currentCard} /> : null}
                             <OccCard
-                                    newOcc={this.state.occList}
+                                    newworkoutplan={this.state.workoutPlanList}
                                     handleSelectChange={this.state.type}
                                     handleStorage={this.handleStorage}
-                                    handleDeleteOccasion={this.handleDeleteOccasion}
+                                    handleDeleteWorkoutPlan={this.handleDeleteWorkoutPlan}
                             />
                     </>
             )
