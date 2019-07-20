@@ -7,8 +7,8 @@ import Profile from './pages/Profile'
 // import FriendList from './pages/FriendList'
 // import Create from './pages/Create'
 import ProfileTop from './components/ProfileTop'
-import NB from './components/NB'
-import TopNav from './components/topnav'
+// import NB from './components/NB'
+import NavBar from './components/NavBar'
 import Stacks from '../../utils/Stacks.js'
 
 class App extends Component {
@@ -20,7 +20,7 @@ class App extends Component {
     return (
       <Router>
         <div>
-          <TopNav />
+          <navbar />
           {/* <Route exact path='/' component={Login} />
           <Route path='/Create' component={Create} />
           <Route path='/NestList' component={NestList} />
@@ -28,7 +28,7 @@ class App extends Component {
           <Route path='/WorkoutPlanList' component={WorkoutPlanList} /> */}
           <Route exact path='/Profile' component={_ => <ProfileTop />} />
           <ProfileTop />
-          <NB />
+          {/* <NB /> */}
         </div>
       </Router>
     )
