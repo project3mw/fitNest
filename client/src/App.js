@@ -10,21 +10,29 @@ import ProfileTop from './components/ProfileTop'
 import NavBar from './components/Navbar'
 // import TopNav from './components/topnav'
 
+import NB from './components/NB'
+import TopNav from './components/topnav'
+import Stacks from '../../utils/Stacks.js'
+
 class App extends Component {
   render () {
+    Stacks.getStacks()
+    .then(({ data }) => console.log(data))
+    .catch(e=> console.error(e))
+
     return (
       
       <Router>
         <div>
-          {/* <TopNav /> */}
+          <TopNav />
           {/* <Route exact path='/' component={Login} />
           <Route path='/Create' component={Create} />
           <Route path='/NestList' component={NestList} />
           <Route path='/FriendList' component={FriendList} />
           <Route path='/WorkoutPlanList' component={WorkoutPlanList} /> */}
-          <Route path='/Profile' component={ProfileTop} />
+          <Route exact path='/Profile' component={_ => <ProfileTop />} />
           <ProfileTop />
-          {/* <NB /> */}
+          <NB />
         </div>
       </Router>
     )
