@@ -9,10 +9,8 @@ import Profile from './pages/Profile'
 import ProfileTop from './components/ProfileTop'
 
 // import NB from './components/NB'
-import NavBar from './components/NavBar'
-import Stacks from '../../utils/Stacks.js'
+import NavBar from './components/navbar'
 
-import NavBar from './components/Navbar'
 // import TopNav from './components/topnav'
 
 // import NB from './components/NB'
@@ -42,6 +40,7 @@ class App extends Component {
           <Route path='/WorkoutPlanList' component={WorkoutPlanList} /> */}
           <Route exact path='/Profile' component={_ => <ProfileTop />} />
           <ProfileTop />
+          {/* <Profile /> */}
           {/* <NB /> */}
 
 
