@@ -2,8 +2,9 @@ import axios from 'axios'
 
 const Stacks = {
     scrape: _ => axios.get('/scrape'),
-    getStacks: _ => axios.get('/stacks'),
-    getFavorites: _ => axios.get('/favorites'),
+    getWorkout: _ => axios.get('/Workout'),
+    getNest: _ => axios.get('/Nest'),
+    getPlan: _ => axios.get('/Plan'),
     addFavorite: id => axios.put(`/stacks/${id}`),
     deleteStack: id => axios.delete(`/stacks/${id}`)
 }
