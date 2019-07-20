@@ -2,7 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import BottomNavigation from "@material-ui/core/BottomNavigation";
 import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
-import Icon from "@material-ui/core/Icon";
+// import Icon from "@material-ui/core/Icon";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import BubbleChartIcon from "@material-ui/icons/BubbleChart";
 import ListAltIcon from "@material-ui/icons/ListAlt";

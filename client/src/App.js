@@ -7,12 +7,13 @@ import Profile from './pages/Profile'
 // import FriendList from './pages/FriendList'
 // import Create from './pages/Create'
 import ProfileTop from './components/ProfileTop'
-// import NB from './components/NB'
+import NavBar from './components/Navbar'
 // import TopNav from './components/topnav'
 
 class App extends Component {
   render () {
     return (
+      
       <Router>
         <div>
           {/* <TopNav /> */}
@@ -29,6 +30,7 @@ class App extends Component {
     )
   }
 }
+<Navbar />
 
 export default App
 
