@@ -7,6 +7,9 @@ import Profile from './pages/Profile'
 // import FriendList from './pages/FriendList'
 // import Create from './pages/Create'
 import ProfileTop from './components/ProfileTop'
+import NavBar from './components/Navbar'
+// import TopNav from './components/topnav'
+
 import NB from './components/NB'
 import TopNav from './components/topnav'
 import Stacks from '../../utils/Stacks.js'
@@ -18,6 +21,7 @@ class App extends Component {
     .catch(e=> console.error(e))
 
     return (
+      
       <Router>
         <div>
           <TopNav />
@@ -34,6 +38,7 @@ class App extends Component {
     )
   }
 }
+<Navbar />
 
 export default App
 
