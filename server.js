@@ -41,7 +41,7 @@ passport.use(new JWTStrategy({
 
 require('./routes')(app)
 
-require('mongoose').connect('mongodb://localhost:27017/auth_db', { useNewUrlParser: true, useCreateIndex: true, useFindAndModify: true })
+require('mongoose').connect(`${process.env.MONGODB_URI}`, { useNewUrlParser: true, useCreateIndex: true, useFindAndModify: true })
   .then(_ => {
     console.log("database connected")
     app.listen(3001, () => console.log('server listening on port: 3001'))
