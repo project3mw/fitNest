@@ -9,7 +9,7 @@ import arnold from '../../assets/images/arnold.png'
 import { Link } from 'react-router-dom';
 
 const styles = theme => ({
-  root: {
+  profileDiv: {
     flexGrow: 1,
     overflow: 'hidden',
     padding: theme.spacing(0, 3),
@@ -40,7 +40,7 @@ function ProfileTop(props) {
   const { classes } = props;
 
   return (
-    <div className={classes.root}>
+    <div className={classes.profileDiv}>
 
       <Paper className={classes.paper}>
         <Grid container wrap="nowrap" spacing={2}>

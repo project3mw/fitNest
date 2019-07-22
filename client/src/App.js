@@ -1,21 +1,16 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-// import Login from './pages/Login'
+import Login from './pages/Login'
 // import WorkoutPlanList from './pages/WorkoutPlanList'
 import Profile from './pages/Profile'
 // import NestList from './pages/NestList'
 // import FriendList from './pages/FriendList'
 // import Create from './pages/Create'
 import ProfileTop from './components/ProfileTop'
-
-// import NB from './components/NB'
-import NavBar from './components/navbar'
-
-// import TopNav from './components/topnav'
-
-// import NB from './components/NB'
-// import TopNav from './components/topnav'
+import NavBar from './components/Navbar'
+import TopNav from './components/TopNav'
 import Stacks from './utils/Stacks.js'
+import './App.css';
 
 
 class App extends Component {
@@ -28,25 +23,19 @@ class App extends Component {
       
       <Router>
         <div>
-
-   
-
-          {/* <TopNav /> */}
-
-          {/* <Route exact path='/' component={Login} />
+          <TopNav />
+      {/* <Route exact path='/' component={Login} />
           <Route path='/Create' component={Create} />
           <Route path='/NestList' component={NestList} />
           <Route path='/FriendList' component={FriendList} />
           <Route path='/WorkoutPlanList' component={WorkoutPlanList} /> */}
           <Route exact path='/Profile' component={_ => <ProfileTop />} />
           <ProfileTop />
-          {/* <Profile /> */}
-          {/* <NB /> */}
-
 
           <NavBar />
 
         </div>
+          
       </Router>
 
     )
