@@ -11,13 +11,8 @@ import NavBar from './components/Navbar'
 import TopNav from './components/TopNav'
 import Stacks from './utils/Stacks.js'
 import './App.css';
-// class App extends Component {
 
-//   render() {
-//     const backStyle = style({
-//       background: 'black'
-//     })
-  
+
 class App extends Component {
   render () {
     Stacks.getStacks()
@@ -29,15 +24,16 @@ class App extends Component {
       <Router>
         <div>
           <TopNav />
-          {/* <Route exact path='/' component={Login} />
+      {/* <Route exact path='/' component={Login} />
           <Route path='/Create' component={Create} />
           <Route path='/NestList' component={NestList} />
           <Route path='/FriendList' component={FriendList} />
           <Route path='/WorkoutPlanList' component={WorkoutPlanList} /> */}
           <Route exact path='/Profile' component={_ => <ProfileTop />} />
           <ProfileTop />
+
           <NavBar />
-          
+
         </div>
           
       </Router>

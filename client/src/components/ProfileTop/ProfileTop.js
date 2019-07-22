@@ -50,11 +50,11 @@ function ProfileTop(props) {
           <Grid item xs>
           <div className={classes.buttonbox}>
 
-          {/* <Link to = '/WorkoutPlanList'> */}
+          <Link to = '/WorkoutPlanList'>
           <Button className={classes.button} variant="outlined" className={classes.button}>
            View Workout Plans
           </Button >
-          {/* </Link>  */}
+          </Link> 
 
           <Button className={classes.button} variant="outlined" className={classes.button}>View Nests  </Button>
           
