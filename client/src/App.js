@@ -9,15 +9,15 @@ import Profile from './pages/Profile'
 import ProfileTop from './components/ProfileTop'
 import NavBar from './components/Navbar'
 import TopNav from './components/TopNav'
-import Stacks from './utils/Stacks.js'
+// import Stacks from './utils/Stacks.js'
 import './App.css';
 
 
 class App extends Component {
   render () {
-    Stacks.getStacks()
-    .then(({ data }) => console.log(data))
-    .catch(e=> console.error(e))
+    // Stacks.getStacks()
+    // .then(({ data }) => console.log(data))
+    // .catch(e=> console.error(e))
 
     return (
       
@@ -31,11 +31,8 @@ class App extends Component {
           <Route path='/WorkoutPlanList' component={WorkoutPlanList} /> */}
           <Route exact path='/Profile' component={_ => <ProfileTop />} />
           <ProfileTop />
-
-          <NavBar />
-
-        </div>
-          
+        <NavBar />
+        </div>    
       </Router>
 
     )
