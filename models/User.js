@@ -1,5 +1,11 @@
 module.exports = (Schema, model) => {
   const User = new Schema({
+      username: {
+        type: String,
+        minlength: 3,
+        maxlength: 10,
+        required: true
+      },
       email: {
         type: String,
         validate: {
@@ -40,7 +46,7 @@ module.exports = (Schema, model) => {
       }]
   })
 
-  // User.plugin(require('passport-local-mongoose'))
+  User.plugin(require('passport-local-mongoose'))
 
   return model('User', User)
 }
