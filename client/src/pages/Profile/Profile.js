@@ -7,25 +7,26 @@ import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import arnold from '../../assets/images/arnold.png'
 import { Link } from 'react-router-dom';
-
+import 'axios'from axios
 
 
 class Profile extends Component {
     state = {
             name: '',
-            type: '',
-            date: '',
+            weight: '',
+            age: '',
             description: '',
             // need to get exact id for login button
             // do i have to define this as a variable above?
             // userid: localStorage.getItem('userLogin'),
             userId: '',
-            occList: []
+            workoutPlanList: [], 
+            nestList: []
     }
     componentWillMount() {
-            Occasion.getSome(1)
+            axios.get('/users/:i')
                     .then(({ data }) => {
-                            this.setState({ occList: data })
+                            this.setState({ workoutPlanList: data })
                     })
     }
 
@@ -33,32 +34,32 @@ class Profile extends Component {
     handleGetOccasions = event => {
             const userId = this.state.userId
             console.log("Here I am!")
-            Occasion.getAll()
+            workoutPlanList.getAll()
     }
 
-    handleSelectImage = (type) => {
-            switch ({ type }) {
-                    case 'birthday':
-                            console.log('birthday')
-                            this.document.CardMedia.style.backgroundImage = "url('./assets/images/balloons.png"
-                            break
-                    case 'wedding':
-                            console.log('wedding')
-                            this.document.CardMedia.style.backgroundImage = "url('./assets/images/wedding.jpg"
-                            break
-                    case 'valentines':
-                            console.log('valentines')
-                            document.body.style.backgroundImage = "url('./assets/images/valentines.jpg"
-                            break
-                    case 'baby':
-                            console.log('baby')
-                            document.body.style.backgroundImage = "url('./assets/images/balloons.png"
-                            break
-                    case 'because':
-                            console.log('because')
-                            document.body.style.backgroundImage = "url('./assets/images/balloons.png"
-                            break
-            }
+    // handleSelectImage = (type) => {
+    //         switch ({ type }) {
+    //                 case 'birthday':
+    //                         console.log('birthday')
+    //                         this.document.CardMedia.style.backgroundImage = "url('./assets/images/balloons.png"
+    //                         break
+    //                 case 'wedding':
+    //                         console.log('wedding')
+    //                         this.document.CardMedia.style.backgroundImage = "url('./assets/images/wedding.jpg"
+    //                         break
+    //                 case 'valentines':
+    //                         console.log('valentines')
+    //                         document.body.style.backgroundImage = "url('./assets/images/valentines.jpg"
+    //                         break
+    //                 case 'baby':
+    //                         console.log('baby')
+    //                         document.body.style.backgroundImage = "url('./assets/images/balloons.png"
+    //                         break
+    //                 case 'because':
+    //                         console.log('because')
+    //                         document.body.style.backgroundImage = "url('./assets/images/balloons.png"
+    //                         break
+    //         }
     }
 
     handleStorage = ({ id, name, type, date, description }) => {
@@ -69,12 +70,12 @@ class Profile extends Component {
         }
     
 
-    handleDeleteOccasion = (id) => {
+    handleDeleteWorkoutPlan = (id) => {
             console.log('Here I am!')
-            Occasion.deleteOne(id)
+            workoutPlanList.deleteOne(id)
                     .then(({ data }) => {
                             this.setState({
-                                    occList: this.state.occList.filter(occ => occ.id !== id)
+                                workoutPlanList: this.state.workoutPlanList.filter(workoutPlan => workoutPlan.id !== id)
                             })
                     })
     }
@@ -89,12 +90,12 @@ class Profile extends Component {
                                     {/* <OccList /> */}
                                     <BottomNav />
                             </div>
-                            {this.state.isEditing ? <EditForm currentOcc={this.state.currentCard} /> : null}
+                            {this.state.isEditing ? <EditForm currentworkoutPlan={this.state.currentCard} /> : null}
                             <OccCard
-                                    newOcc={this.state.occList}
+                                    newworkoutplan={this.state.workoutPlanList}
                                     handleSelectChange={this.state.type}
                                     handleStorage={this.handleStorage}
-                                    handleDeleteOccasion={this.handleDeleteOccasion}
+                                    handleDeleteWorkoutPlan={this.handleDeleteWorkoutPlan}
                             />
                     </>
             )
