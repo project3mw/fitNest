@@ -49,3 +49,6 @@ require('mongoose').connect(`${process.env.MONGODB_URI}`, { useNewUrlParser: tru
   .catch(function(err) {
   console.log(err.message);
   });
+
+  
+  // 'mongodb://localhost:27017/auth_db'
