@@ -40,7 +40,7 @@ module.exports = (Schema, model) => {
       }]
   })
 
-  // User.plugin(require('passport-local-mongoose'))
+  User.plugin(require('passport-local-mongoose'))
 
   return model('User', User)
 }
