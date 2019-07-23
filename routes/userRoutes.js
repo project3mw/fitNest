@@ -16,7 +16,7 @@ module.exports = app => {
       height: req.body.height,
       weight: req.body.weight,
       gWeight: req.body.gWeight,
-      userImg: req.body.userImg,
+      // userImg: req.body.userImg,
       fitLevel: req.body.fitLevel
     }), req.body.password,e => {
       if(e) throw e
