@@ -50,3 +50,6 @@ require('mongoose').connect( MONGODB_URI, { useNewUrlParser: true, useCreateInde
   .catch(function(err) {
   console.log(err.message);
   });
+
+  
+  // 'mongodb://localhost:27017/auth_db'
