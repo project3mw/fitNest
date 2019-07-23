@@ -7,10 +7,11 @@ import Profile from './pages/Profile'
 // import FriendList from './pages/FriendList'
 // import Create from './pages/Create'
 import ProfileTop from './components/ProfileTop'
-import NavBar from './components/Navbar'
+import NavBar from './components/navbar/NavBar.js'
 import TopNav from './components/TopNav'
 // import Stacks from './utils/Stacks.js'
 import './App.css';
+import Profile2 from './pages/Profile/Profile2.js'
 
 
 class App extends Component {
@@ -24,6 +25,7 @@ class App extends Component {
       <Router>
         <div>
           <TopNav />
+          <Profile2/>
       {/* <Route exact path='/' component={Login} />
           <Route path='/Create' component={Create} />
           <Route path='/NestList' component={NestList} />

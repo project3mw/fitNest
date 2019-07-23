@@ -42,11 +42,19 @@ module.exports = app => {
       })
       })
   })
+  //  Get user by id
+  app.get('/users/:id', (req, res) => {
+    User.findById({_id: req.params.id})
+      .then(users => res.json(users))
+      .catch(e => console.log(e))
+  })
+
   app.get('/users', (req, res) => {
     User.find({})
       .then(users => res.json(users))
       .catch(e => console.log(e))
   })
+
   app.post('/users', (req, res) => {
     User.create(req.body)
       .then(_ => res.sendStatus(200))

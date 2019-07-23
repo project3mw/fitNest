@@ -7,14 +7,14 @@ import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import arnold from '../../assets/images/arnold.png'
 import { Link } from 'react-router-dom';
-
+import 'axios'from axios
 
 
 class Profile extends Component {
     state = {
             name: '',
-            type: '',
-            date: '',
+            weight: '',
+            age: '',
             description: '',
             // need to get exact id for login button
             // do i have to define this as a variable above?
@@ -24,7 +24,7 @@ class Profile extends Component {
             nestList: []
     }
     componentWillMount() {
-            workoutPlanList.getSome(1)
+            axios.get('/users/:i')
                     .then(({ data }) => {
                             this.setState({ workoutPlanList: data })
                     })
