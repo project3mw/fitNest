@@ -7,15 +7,19 @@ import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import arnold from '../../assets/images/arnold.png'
 import { Link } from 'react-router-dom';
-import 'axios'from axios
+import axios from 'axios'
 
 
 class Profile extends Component {
     state = {
             name: '',
-            weight: '',
             age: '',
-            description: '',
+            gender: '',
+            weight: '',
+            gWeight: '',
+            location: '',
+            height: '',
+            fitLevel: '',
             // need to get exact id for login button
             // do i have to define this as a variable above?
             // userid: localStorage.getItem('userLogin'),
@@ -24,14 +28,22 @@ class Profile extends Component {
             nestList: []
     }
     componentWillMount() {
-            axios.get('/users/:i')
+            axios.get('/users/:id')
                     .then(({ data }) => {
-                            this.setState({ workoutPlanList: data })
+                            this.setState({ 
+                                name: data.name, 
+                                age: data.age, 
+                                gender: data.gender, 
+                                height: data.height,
+                                weight: data.weight, 
+                                gWeight: data.gWeight,
+                                fitLevel: data.fitLevel
+                             })
                     })
     }
 
 
-    handleGetOccasions = event => {
+    handleGetWorkout = event => {
             const userId = this.state.userId
             console.log("Here I am!")
             workoutPlanList.getAll()
