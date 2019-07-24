@@ -1,0 +1,11 @@
+/* .excercise_container {
+  display: 'flex';
+  flexWrap: 'wrap' 
+} */
+
+.paper{
+  padding: 2;
+  text-align: center;
+}
+
+/* <Typography component="div" style={{ backgroundColor: '#cfe8fc', height: '100vh' }} /> */
