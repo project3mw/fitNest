@@ -8,7 +8,7 @@ import Profile from './pages/Profile'
 // import FriendList from './pages/FriendList'
 // import Create from './pages/Create'
 import ProfileTop from './components/ProfileTop'
-import NavBar from './components/Navbar/NavBar'
+import NavBar from './components/navbar/NavBar'
 import TopNav from './components/TopNav'
 // import Stacks from './utils/Stacks.js'
 import './App.css';
