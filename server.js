@@ -27,6 +27,7 @@ app.use(session({
 app.use(passport.initialize())
 app.use(passport.session())
 
+let MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/fitnestdb'
 
 passport.use(new Strategy(User.authenticate()))
 passport.serializeUser(User.serializeUser())
@@ -41,7 +42,7 @@ passport.use(new JWTStrategy({
 
 require('./routes')(app)
 
-require('mongoose').connect(`${process.env.MONGODB_URI}`, { useNewUrlParser: true, useCreateIndex: true, useFindAndModify: true })
+require('mongoose').connect( MONGODB_URI, { useNewUrlParser: true, useCreateIndex: true, useFindAndModify: true })
   .then(_ => {
     console.log("database connected")
     app.listen(3001, () => console.log('server listening on port: 3001'))
@@ -49,3 +50,6 @@ require('mongoose').connect(`${process.env.MONGODB_URI}`, { useNewUrlParser: tru
   .catch(function(err) {
   console.log(err.message);
   });
+
+  
+  // 'mongodb://localhost:27017/auth_db'

@@ -34,7 +34,7 @@ module.exports = (Schema, model) => {
       height: String,
       weight: Number,
       gWeight: Number,
-      userImg: String,
+      // userImg: String,
       fitLevel: {
         type: Number,
         min: 1,

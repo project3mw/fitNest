@@ -6,12 +6,14 @@ import BottomNavigation from "@material-ui/core/BottomNavigation";
 import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
 import PersonIcon from "@material-ui/icons/Person";
 // import BubbleChartIcon from "@material-ui/icons/BubbleChart";
-import ListIcon from "@material-ui/icons/List";
+// import ListIcon from "@material-ui/icons/List";
+import ClassIcon from "@material-ui/icons/Class";
 // import PersonAddIcon from "@material-ui/icons/PersonAdd";
 // import AddIcon from "@material-ui/icons/Add";
 // import Fab from '@material-ui/core/Fab';
 import MeetingRoomIcon from '@material-ui/icons/MeetingRoom'
-import RowingIcon from '@material-ui/icons/Rowing'
+// import RowingIcon from '@material-ui/icons/Rowing'
+import DirectionsRunIcon from '@material-ui/icons/DirectionsRun'
 
 const useStyles = makeStyles({
   nb: {
@@ -82,14 +84,14 @@ function NavBar() {
       </Link>
       <Link to='/Create'>
       <BottomNavigationAction label='Workouts' value='workouts'
-        style={{color: 'white'}} icon={<RowingIcon />}
+        style={{color: 'white'}} icon={<DirectionsRunIcon />}
         />
         </Link>
       <Link to='/WorkoutPlanList'>
       <BottomNavigationAction
         label="Plan" style={{color: 'white'}} size={50}
         // value="wp"
-        icon={<ListIcon />}
+        icon={<ClassIcon />}
       />
       </Link>
 

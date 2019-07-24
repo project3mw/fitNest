@@ -7,14 +7,19 @@
 // import Button from '@material-ui/core/Button';
 // import arnold from '../../assets/images/arnold.png'
 // import { Link } from 'react-router-dom';
+// import Axios from 'axios';
 
 
 
+// function Profile() {
+//         const classes = useStyles();
+//         const [value, setValue] = React.useState("recents");
+        
 // class Profile extends Component {
 //     state = {
 //             name: '',
-//             type: '',
-//             date: '',
+//             weight: '',
+//             age: '',
 //             description: '',
 //             // need to get exact id for login button
 //             // do i have to define this as a variable above?
@@ -24,7 +29,7 @@
 //             nestList: []
 //     }
 //     componentWillMount() {
-//             workoutPlanList.getSome(1)
+//             axios.get('/users/:i')
 //                     .then(({ data }) => {
 //                             this.setState({ workoutPlanList: data })
 //                     })
@@ -37,29 +42,29 @@
 //             workoutPlanList.getAll()
 //     }
 
-//     // handleSelectImage = (type) => {
-//     //         switch ({ type }) {
-//     //                 case 'birthday':
-//     //                         console.log('birthday')
-//     //                         this.document.CardMedia.style.backgroundImage = "url('./assets/images/balloons.png"
-//     //                         break
-//     //                 case 'wedding':
-//     //                         console.log('wedding')
-//     //                         this.document.CardMedia.style.backgroundImage = "url('./assets/images/wedding.jpg"
-//     //                         break
-//     //                 case 'valentines':
-//     //                         console.log('valentines')
-//     //                         document.body.style.backgroundImage = "url('./assets/images/valentines.jpg"
-//     //                         break
-//     //                 case 'baby':
-//     //                         console.log('baby')
-//     //                         document.body.style.backgroundImage = "url('./assets/images/balloons.png"
-//     //                         break
-//     //                 case 'because':
-//     //                         console.log('because')
-//     //                         document.body.style.backgroundImage = "url('./assets/images/balloons.png"
-//     //                         break
-//     //         }
+//     handleSelectImage = (type) => {
+//             switch ({ type }) {
+//                     case 'birthday':
+//                             console.log('birthday')
+//                             this.document.CardMedia.style.backgroundImage = "url('./assets/images/balloons.png"
+//                             break
+//                     case 'wedding':
+//                             console.log('wedding')
+//                             this.document.CardMedia.style.backgroundImage = "url('./assets/images/wedding.jpg"
+//                             break
+//                     case 'valentines':
+//                             console.log('valentines')
+//                             document.body.style.backgroundImage = "url('./assets/images/valentines.jpg"
+//                             break
+//                     case 'baby':
+//                             console.log('baby')
+//                             document.body.style.backgroundImage = "url('./assets/images/balloons.png"
+//                             break
+//                     case 'because':
+//                             console.log('because')
+//                             document.body.style.backgroundImage = "url('./assets/images/balloons.png"
+//                             break
+//             }
 //     }
 
 //     handleStorage = ({ id, name, type, date, description }) => {
@@ -98,8 +103,10 @@
 //                                     handleDeleteWorkoutPlan={this.handleDeleteWorkoutPlan}
 //                             />
 //                     </>
-//             )
+//         );
 //     }
+
 // }
+
 
 // export default Profile
