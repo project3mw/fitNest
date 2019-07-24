@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import Regform from './components/Regform'
 import React, { Component } from 'react'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+// import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Login from './pages/Login'
 // import WorkoutPlanList from './pages/WorkoutPlanList'
 import Profile from './pages/Profile'
@@ -43,7 +43,7 @@ class App extends Component {
 
 
           <TopNav />
-          <Profile2/>
+          <Profile />
       {/* <Route exact path='/' component={Login} />
           <Route path='/Create' component={Create} />
           <Route path='/NestList' component={NestList} />

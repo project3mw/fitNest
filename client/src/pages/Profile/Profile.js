@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Paper from '@material-ui/core/Paper';
 import { withStyles } from '@material-ui/core/styles';
@@ -20,15 +20,12 @@ class Profile extends Component {
             location: '',
             height: '',
             fitLevel: '',
-            // need to get exact id for login button
-            // do i have to define this as a variable above?
-            // userid: localStorage.getItem('userLogin'),
             userId: '',
             workoutPlanList: [], 
             nestList: []
     }
     componentWillMount() {
-            axios.get('/users/:id')
+            axios.get('/users/5d3664f6d70a300f58a1070d')
                     .then(({ data }) => {
                             this.setState({ 
                                 name: data.name, 
@@ -43,11 +40,11 @@ class Profile extends Component {
     }
 
 
-    handleGetWorkout = event => {
-            const userId = this.state.userId
-            console.log("Here I am!")
-            workoutPlanList.getAll()
-    }
+    // handleGetWorkout = event => {
+    //         const userId = this.state.userId
+    //         console.log("Here I am!")
+    //         workoutPlanList.getAll()
+    // }
 
     // handleSelectImage = (type) => {
     //         switch ({ type }) {
@@ -74,44 +71,44 @@ class Profile extends Component {
     //         }
     }
 
-    handleStorage = ({ id, name, type, date, description }) => {
-            let cardData = { id, name, type, date, description }
-            localStorage.setItem('update', JSON.stringify(cardData))
-            this.setState({ ...this.state, currentCard: cardData, isEditing: true })
-            console.log(cardData)
-        }
+    // handleStorage = ({ id, name, type, date, description }) => {
+    //         let cardData = { id, name, type, date, description }
+    //         localStorage.setItem('update', JSON.stringify(cardData))
+    //         this.setState({ ...this.state, currentCard: cardData, isEditing: true })
+    //         console.log(cardData)
+    //     }
     
 
-    handleDeleteWorkoutPlan = (id) => {
-            console.log('Here I am!')
-            workoutPlanList.deleteOne(id)
-                    .then(({ data }) => {
-                            this.setState({
-                                workoutPlanList: this.state.workoutPlanList.filter(workoutPlan => workoutPlan.id !== id)
-                            })
-                    })
-    }
+    // handleDeleteWorkoutPlan = (id) => {
+    //         console.log('Here I am!')
+    //         workoutPlanList.deleteOne(id)
+    //                 .then(({ data }) => {
+    //                         this.setState({
+    //                             workoutPlanList: this.state.workoutPlanList.filter(workoutPlan => workoutPlan.id !== id)
+    //                         })
+    //                 })
+    //             }
 
-
-    render() {
-            return (
-                    <>
-                            <div>
-                                    {/* <TopNav /> */}
-                                    <ProfileTop />
-                                    {/* <OccList /> */}
-                                    <BottomNav />
-                            </div>
-                            {this.state.isEditing ? <EditForm currentworkoutPlan={this.state.currentCard} /> : null}
-                            <OccCard
-                                    newworkoutplan={this.state.workoutPlanList}
-                                    handleSelectChange={this.state.type}
-                                    handleStorage={this.handleStorage}
-                                    handleDeleteWorkoutPlan={this.handleDeleteWorkoutPlan}
-                            />
-                    </>
-            )
-    }
-}
+    // render() {
+    //         return (
+    //                 <>
+    //                         <div>
+    //                                 {/* <TopNav /> */}
+    //                                 <ProfileTop />
+    //                                 {/* <OccList /> */}
+    //                                 <BottomNav />
+    //                         </div>
+    //                         {this.state.isEditing ? <EditForm currentworkoutPlan={this.state.currentCard} /> : null}
+    //                         <OccCard
+    //                                 newworkoutplan={this.state.workoutPlanList}
+    //                                 handleSelectChange={this.state.type}
+    //                                 handleStorage={this.handleStorage}
+    //                                 handleDeleteWorkoutPlan={this.handleDeleteWorkoutPlan}
+    //                         />
+    //                 </>
+    //         )
+    
+    //         }
+    //     }
 
 export default Profile
