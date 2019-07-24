@@ -20,7 +20,7 @@ module.exports = (Schema, model) => {
         type: Schema.Types.ObjectId,
         ref: 'Post'
       }],
-      admin: {
+      creator: {
         type: Schema.Types.ObjectId,
         ref: 'User'
       }

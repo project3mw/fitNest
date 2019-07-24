@@ -11,13 +11,13 @@ module.exports = (Schema, model) => {
       focus: [{
         type: String,
         required: true,
-        enum: ['abs','legs','shoulders','back','biceps','chest','triceps','all']
+        enum: ['Abs','Legs','Shoulders','Back','Biceps','Chest','Triceps','Calves']
       }],
       goal: {
         type: String,
         required: true
       },
-      owner: {
+      creator: {
         type: Schema.Types.ObjectId,
         ref: 'User'
       }
