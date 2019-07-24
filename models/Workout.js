@@ -1,6 +1,9 @@
 module.exports = (Schema, model) => {
   const Workout = new Schema({
-      name: String, 
+      name: {
+        type: String,
+        match: /[a-z]/
+      }, 
       group: String,
       intensity: {
         type: Number,
@@ -13,7 +16,15 @@ module.exports = (Schema, model) => {
         type: Schema.Types.ObjectId,
         ref: 'User'
       },
+      creatorName: {
+        type: String,
+        match: /[a-z]/
+      },
       description: {
+        type: String,
+        match: /[a-z]/
+      },
+      notes: {
         type: String,
         match: /[a-z]/
       }

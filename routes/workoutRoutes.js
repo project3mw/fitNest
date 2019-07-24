@@ -1,6 +1,7 @@
 const { Workout } = require('../models')
 
 module.exports = app => {
+
   app.get('/workouts', (req, res) => {
     Workout.find({})
       .then(workouts => res.json(workouts))
