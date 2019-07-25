@@ -9,7 +9,7 @@ const app = express()
 require("dotenv").config()
 
 
-app.use(express.static(join(__dirname, 'public')))
+app.use(express.static(join(__dirname, 'public', 'build')))
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
