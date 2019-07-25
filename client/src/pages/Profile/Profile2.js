@@ -11,37 +11,44 @@ import axios from 'axios'
 import CardContent from '@material-ui/core/CardContent';
 import ProfileTop from '../../components/ProfileTop'
 import Typography from '@material-ui/core/Typography';
+// import Stacks from '../../utils/Stacks.js'
+import Card from '@material-ui/core/Card';
 
 
 
 class Profile2 extends Component {
     state = {
-            name: '',
-            weight: '',
-            age: '',
-            description: '',
-            // need to get exact id for login button
-            // do i have to define this as a variable above?
-            // userid: localStorage.getItem('userLogin'),
-            userId: '',
-            workoutPlanList: [], 
-            nestList: []
+        name: '',
+        username: '',
+        email: '',
+        age: '',
+        gender: '',
+        weight: '',
+        gWeight: '',
+        location: '',
+        height: '',
+        fitLevel: '',
+        userId: '',
+       
     }
-
+// let userToken = whateverlocalstorage
     componentWillMount() {
-            axios.get('/users/5d3664f6d70a300f58a1070d')
+            axios.get('/users')
             // axios.get(`/users/${id}`)
                     .then(({ data }) => {
-                        console.log(data)
-                            this.setState({ name: data.name,
-                            age: data.age })
+                        this.setState({ 
+                                name: data.name, 
+                                username: data.username,
+                                email: data.email,
+                                age: data.age, 
+                                gender: data.gender, 
+                                height: data.height,
+                                weight: data.weight, 
+                                gWeight: data.gWeight,
+                                fitLevel: data.fitLevel
+                        })
                     })
     }
-
-
-
-
-
 
 
     render() {
@@ -49,7 +56,7 @@ class Profile2 extends Component {
                     <>
                             <div>
                                     {/* <TopNav /> */}
-                                    <ProfileTop />
+                                    {/* {this.state.}     */}
                                     {/* <OccList /> */}
                                     {/* <BottomNav /> */}
                             </div>
@@ -63,6 +70,6 @@ class Profile2 extends Component {
                     </>
             )
     }
-}
 
+}
 export default Profile2

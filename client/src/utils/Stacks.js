@@ -1,12 +1,14 @@
 import axios from 'axios'
 
 const Stacks = {
-    scrape: _ => axios.get('/scrape'),
+    getUsers: _ => axios.get('/Users'),
+    getUser: id => axios.get(`Users/${id}`),
     getWorkout: _ => axios.get('/Workout'),
     getNest: _ => axios.get('/Nest'),
     getPlan: _ => axios.get('/Plan'),
-    addFavorite: id => axios.put(`/stacks/${id}`),
-    deleteStack: id => axios.delete(`/stacks/${id}`)
+    getFavorites: _ => axios.get(`/Favorites`),
+    addFavorite: id => axios.put(`/Workout/${id}`),
+    deleteWorkout: id => axios.delete(`/Workout/${id}`)
 }
 
 export default Stacks
