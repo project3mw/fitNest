@@ -52,9 +52,10 @@ class App extends Component {
           <Route exact path='/Profile' component={_ => <ProfileTop />} />
           <ProfileTop />
 
-      {/* <Regform/> */}
-        {/* <Login/> */}
-      <NavBar />
+
+      <Regform/>
+        <Login/>
+
         </div>    
       </Router>
 
