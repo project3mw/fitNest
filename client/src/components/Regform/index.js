@@ -1,1 +1,1 @@
-export { default } from './Regform.js'
+export { default } from './Regform'

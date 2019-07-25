@@ -1,65 +1,82 @@
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
-import Regform from './components/Regform'
+import Regform from './components/RegForm'
 import React, { Component } from 'react'
 import Login from './pages/Login'
-// import WorkoutPlanList from './pages/WorkoutPlanList'
 import Profile from './pages/Profile'
+import ProfileTop from './components/ProfileTop'
+import TopNav from './components/TopNav'
+import SignUp from './pages/SignUp'
+import './App.css';
+import RegForm from './components/RegForm';
+import NavBar from './components/navbar';
+import { makeStyles } from '@material-ui/core/styles'
+// import Stacks from './utils/Stacks.js'
+// import WorkoutPlanList from './pages/WorkoutPlanList'
 // import NestList from './pages/NestList'
 // import FriendList from './pages/FriendList'
 // import Create from './pages/Create'
-import ProfileTop from './components/ProfileTop'
-import NavBar from './components/Navbar/NavBar'
-import TopNav from './components/TopNav'
-// import Stacks from './utils/Stacks.js'
-import './App.css';
-import Profile2 from './pages/Profile/Profile2.js'
+// import Profile2 from './pages/Profile/Profile2.js'
 
-class App extends Component {
-  // renderRedirect = () =>{
-  //   console.log("Redirecting")
-    //Redirect to
-  // }
-  render () {
-    // Stacks.getStacks()
-    // .then(({ data }) => console.log(data))
-    // .catch(e=> console.error(e))
-
+const useStyles = makeStyles(theme => ({
+  '@global': {
+    body: {
+      backgroundColor: theme.palette.common.white,
+      color: '#FFE6D0',
+      textDecoration: 'none'
+    },
+  },
+  paper: {
+    marginTop: theme.spacing(8),
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+  },
+  avatar: {
+    margin: theme.spacing(1),
+    backgroundColor: theme.palette.secondary.main,
+  },
+  form: {
+    width: '100%', // Fix IE 11 issue.
+    marginTop: theme.spacing(1),
+    
+  },
+  submit: {
+    margin: theme.spacing(3, 0, 2),
+  },
+  text: {
+    color: 'white'
+  },
+  muiFormControlRoot: {
+    color: 'white'
+  }
+}))
+    const App = _ => {
+      const classes = useStyles()
     return (
       
       <Router>
         <div>
 
-          {/* <TopNav /> */}
-       {/* <Route exact path='/' component={Login} /> */}
-          {/* <Route path='/Create' component={Create} /> */}
-          {/* <Route path='/NestList' component={NestList} /> */}
-          {/* <Route path='/FriendList' component={FriendList} /> */}
-          {/* <Route path='/WorkoutPlanList' component={WorkoutPlanList} /> */} 
-          {/* <Route exact path='/Profile' component={_ => <ProfileTop />} />
-          <ProfileTop />
-        <NavBar /> */}
+         
        {/* {this.loggedin ? this.renderRedirect : console.log("not redirecting") } */}
 
 
           <TopNav />
-          <Profile2/>
-      {/* <Route exact path='/' component={Login} />
-          <Route path='/Create' component={Create} />
-          <Route path='/NestList' component={NestList} />
-          <Route path='/FriendList' component={FriendList} />
-          <Route path='/WorkoutPlanList' component={WorkoutPlanList} /> */}
-          <Route exact path='/Profile' component={_ => <ProfileTop />} />
-          <ProfileTop />
+      
 
-      <Regform/>
-        <Login/>
-      <NavBar />
+      <Route exact path='/' component={_ => <Login />} />
+      <Route exact path='/Login' component={_ => <Login />} />
+      <Route exact path='/SignUp' component={_ => <SignUp />} />
+      <Route exact path='/ProfileReg' component={_ => <RegForm />} />
+      <Route exact path='/Profile' component={_ => <Profile />} />
+<NavBar />
+      {/* <Regform/> */}
+      
         </div>    
       </Router>
 
     )
   }
-}
 export default App
 
 
