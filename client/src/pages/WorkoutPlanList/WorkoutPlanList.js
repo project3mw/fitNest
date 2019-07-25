@@ -21,56 +21,60 @@ class WorkoutPlanList extends Component {
         favorite: '',
         time: '',
         description: '',
+        plans: [],
         userId: '',
         workoutPlanList: [], 
+        viewWorkouts: false
         
     }
 
+   
+
     componentWillMount() {
-            axios.get('/plans', (req, res) => {
-              .then(({ data }) => {
-                  this.setState({
-                      name: data.name, 
-                      group: data.group, 
-                      intensity: data.intensity, 
-                      favorite: data.favorite,
-                      time: data.time,
-                      description: data.description
-                  })
-              })
-              .catch(e => console.log(e))
+       axios.get('/plans')
+            // axios.get(`/users/${id}`)
+                    .then(({ data }) => {
+                        console.log(data[0].name)
+                        this.setState({
+                    name: data[0].name,
+                    group: data[0].group, 
+                      intensity: data[0].intensity, 
+                      favorite: data[0].favorite,
+                      workoutPlanList: data[0].workout,
+                      time: data[0].time,
+                      description: data[0].description
+                        })
+                    })
+    }
+    
+        
 
 
-}
+            
+          
+
+
+
 
 
 
 
 
     render() {
+        // {!viewWorkouts ? 
             return (
                     <>
-                            <div>
-                                    {/* <TopNav /> */}
-                                    {this.state.getPlan.map(getPlan => (
-                                        <div>
-                                        <p>{plan.name}</p>
-                                        <p>{plan.name}</p>
-                                        <p>{plan.name}</p>
-                                        <p>{plan.name}</p>
-                                        <p>{plan.name}</p>
-                                        <p>{plan.name}</p>
-                                        <p>{plan.name}</p>
-                                        </div>
-                                    ))}    
-                                    {/* <OccList /> */}
-                                    {/* <BottomNav /> */}
-                            </div>
-                           
-                 
+                    <div>
+                        <h1> {this.state.name} </h1>
+</div>
                     </>
+
+                        
             )
     }
 }
 
 export default WorkoutPlanList
+//1. test plan route (works on local but is Dean inputting plans?)
+//2. Test axios.get('/plans) to render components
+//Test get workout(id hardcode in id) then render component

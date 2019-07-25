@@ -12,12 +12,15 @@ import CardContent from '@material-ui/core/CardContent';
 import ProfileTop from '../../components/ProfileTop'
 import Typography from '@material-ui/core/Typography';
 // import Stacks from '../../utils/Stacks.js'
+import Card from '@material-ui/core/Card';
 
 
 
 class Profile2 extends Component {
     state = {
         name: '',
+        username: '',
+        email: '',
         age: '',
         gender: '',
         weight: '',
@@ -26,16 +29,17 @@ class Profile2 extends Component {
         height: '',
         fitLevel: '',
         userId: '',
-        workoutPlanList: [], 
-        nestList: []
+       
     }
-
+// let userToken = whateverlocalstorage
     componentWillMount() {
-            axios.get('/users/')
+            axios.get('/users')
             // axios.get(`/users/${id}`)
                     .then(({ data }) => {
                         this.setState({ 
                                 name: data.name, 
+                                username: data.username,
+                                email: data.email,
                                 age: data.age, 
                                 gender: data.gender, 
                                 height: data.height,
