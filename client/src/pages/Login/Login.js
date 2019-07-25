@@ -24,7 +24,7 @@ const useStyles = makeStyles(theme => ({
     body: {
       backgroundColor: theme.palette.common.white,
       color: '#FFE6D0',
-      textDecoration: 'none'
+      // textDecoration: 'none'
     },
   },
   paper: {

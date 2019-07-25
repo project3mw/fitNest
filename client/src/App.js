@@ -1,9 +1,8 @@
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
-import Regform from './components/RegForm'
 import React, { Component } from 'react'
 import Login from './pages/Login'
 import Profile from './pages/Profile'
-import ProfileTop from './components/ProfileTop'
+// import ProfileTop from './components/ProfileTop'
 import TopNav from './components/TopNav'
 import SignUp from './pages/SignUp'
 import './App.css';
@@ -17,41 +16,7 @@ import { makeStyles } from '@material-ui/core/styles'
 // import Create from './pages/Create'
 // import Profile2 from './pages/Profile/Profile2.js'
 
-const useStyles = makeStyles(theme => ({
-  '@global': {
-    body: {
-      backgroundColor: theme.palette.common.white,
-      color: '#FFE6D0',
-      textDecoration: 'none'
-    },
-  },
-  paper: {
-    marginTop: theme.spacing(8),
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-  },
-  avatar: {
-    margin: theme.spacing(1),
-    backgroundColor: theme.palette.secondary.main,
-  },
-  form: {
-    width: '100%', // Fix IE 11 issue.
-    marginTop: theme.spacing(1),
-    
-  },
-  submit: {
-    margin: theme.spacing(3, 0, 2),
-  },
-  text: {
-    color: 'white'
-  },
-  muiFormControlRoot: {
-    color: 'white'
-  }
-}))
     const App = _ => {
-      const classes = useStyles()
     return (
       
       <Router>

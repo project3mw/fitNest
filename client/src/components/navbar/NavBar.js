@@ -24,7 +24,8 @@ const useStyles = makeStyles({
     bottom: 0,
     borderTopLeftRadius: '30px',
     borderTopRightRadius: '30px',
-    
+    // margin: '0 auto',
+    marginLeft: '-8px'   
   },
   fabButton: {
     position: 'absolute',
@@ -34,7 +35,7 @@ const useStyles = makeStyles({
     right: 0,
     margin: '0 auto',
     backgroundColor: '#FFE6D0',
-    color: 'grey',
+    // color: 'grey',
   },
 });
 
@@ -42,9 +43,9 @@ function NavBar() {
   const classes = useStyles();
   const [value, setValue] = React.useState("recents");
 
-  function handleChange(event, newValue) {
-    setValue(newValue);
-  }
+  // function handleChange(event, newValue) {
+  //   setValue(newValue);
+  // }
 
   return (
     <div>
