@@ -53,7 +53,7 @@ class App extends Component {
 
       <Regform/>
         <Login/>
-      <NavBar />
+        
         </div>    
       </Router>
 
