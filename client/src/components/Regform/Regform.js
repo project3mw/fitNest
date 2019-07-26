@@ -11,6 +11,7 @@ import FormLabel from '@material-ui/core/FormLabel'
 import MenuItem from '@material-ui/core/MenuItem'
 import Select from '@material-ui/core/Select'
 import Button from '@material-ui/core/Button'
+import Name from './components/name'
 import DateofBirth from './components/dateofbirth'
 import RadioButtons from './components/radiobuttons/radiobuttons'
 import FitnessLevel from './components/FitnessLevel'
@@ -27,6 +28,9 @@ const RegForm = (props) => {
     <Grid id='container'>
       {/* <h1 id='greeting'>Welcome {props.displayName.split(' ')[0]}!</h1> */}
       <Grid id='formContainer' container spacing={3} >
+      <Grid id='name' item xs={6}>
+          <Name key='dateOfBirth' handleInputChange={props.handleInputChange} handleDateChange={props.handleDateChange} selectedDate={props.dob} />
+        </Grid>
         <Grid id='dateOfBirth' item xs={6}>
           <DateofBirth key='dateOfBirth' handleInputChange={props.handleInputChange} handleDateChange={props.handleDateChange} selectedDate={props.dob} />
         </Grid>

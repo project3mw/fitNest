@@ -2,7 +2,7 @@ import React, { useState, useEffect,useRef } from 'react'
 // import { withStyles } from '@material-ui/styles'
 import Button from '@material-ui/core/Button'
 import axios from 'axios'
-import Avatar from '@material-ui/core/Avatar';
+// import Avatar from '@material-ui/core/Avatar';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
@@ -16,6 +16,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import { Link } from 'react-router-dom'
 import './Login.css'
+import logo from '../../white_logo.png'
 
 
 
@@ -33,12 +34,12 @@ const useStyles = makeStyles(theme => ({
     flexDirection: 'column',
     alignItems: 'center',
   },
-  avatar: {
-    margin: theme.spacing(1),
-    backgroundColor: theme.palette.secondary.main,
-  },
+  // logo: {
+  //   // margin: theme.spacing(1),
+  //   // backgroundColor: theme.palette.secondary.main,
+  // },
   form: {
-    width: '100%', // Fix IE 11 issue.
+    width: '100%', 
     marginTop: theme.spacing(1),
     
   },
@@ -135,9 +136,11 @@ const classes = useStyles();
     <Container component="main" maxWidth="xs">
       <CssBaseline />
       <div className={classes.paper}>
-        <Avatar className={classes.avatar}>
-          <LockOutlinedIcon />
-        </Avatar>
+      <div className={classes.logoDiv}>
+      {/* <img src={logo} className={classes.appLogo} alt="logo"/> */}
+      <img className={classes.logo} src={logo} id="appLogo" alt="logo" style={{width: 180, height: 'auto', marginBottom: 20}}/>
+      </div>
+          {/* <LockOutlinedIcon /> */}
         <Typography component="h1" variant="h5">
           Sign in
         </Typography>

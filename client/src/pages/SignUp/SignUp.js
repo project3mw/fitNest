@@ -12,6 +12,7 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+import logo from '../../white_logo.png'
 
 
 // const useStyles = makeStyles(theme => ({
@@ -53,10 +54,10 @@ const useStyles = makeStyles(theme => ({
       flexDirection: 'column',
       alignItems: 'center',
     },
-    avatar: {
-      margin: theme.spacing(1),
-      backgroundColor: theme.palette.secondary.main,
-    },
+    // avatar: {
+    //   margin: theme.spacing(1),
+    //   backgroundColor: theme.palette.secondary.main,
+    // },
     form: {
       width: '100%', // Fix IE 11 issue.
       marginTop: theme.spacing(1),
@@ -80,9 +81,10 @@ function SignUp() {
     <Container component="main" maxWidth="xs">
       <CssBaseline />
       <div className={classes.paper}>
-        <Avatar className={classes.avatar}>
-          <LockOutlinedIcon />
-        </Avatar>
+      <div className={classes.logoDiv}>
+      {/* <img src={logo} className={classes.appLogo} alt="logo"/> */}
+      <img className={classes.logo} src={logo} id="appLogo" alt="logo" style={{width: 180, height: 'auto', marginBottom: 20}}/>
+      </div>
         <Typography component="h1" variant="h5">
           Sign up
         </Typography>
@@ -135,10 +137,10 @@ function SignUp() {
               />
             </Grid>
             <Grid item xs={12}>
-              <FormControlLabel
+              {/* <FormControlLabel
                 control={<Checkbox value="allowExtraEmails" style={{color:"#FFE6D0"}} />}
                 label="I want to receive inspiration, marketing promotions and updates via email."
-              />
+              /> */}
             </Grid>
           </Grid>
           <Button

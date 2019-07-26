@@ -25,7 +25,7 @@ const useStyles = makeStyles({
     borderTopLeftRadius: '30px',
     borderTopRightRadius: '30px',
     // margin: '0 auto',
-    marginLeft: '-8px'   
+    // marginLeft: '-8px'   
   },
   fabButton: {
     position: 'absolute',

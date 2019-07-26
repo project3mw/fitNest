@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import React, { Component } from 'react'
 import Login from './pages/Login'
 import Profile from './pages/Profile'
+// import Logo from './assets/images/nest.svg'
 // import ProfileTop from './components/ProfileTop'
 import TopNav from './components/TopNav'
 import SignUp from './pages/SignUp'
@@ -26,7 +27,7 @@ import { makeStyles } from '@material-ui/core/styles'
        {/* {this.loggedin ? this.renderRedirect : console.log("not redirecting") } */}
 
 
-          <TopNav />
+          {/* <TopNav /> */}
       
 
       <Route exact path='/' component={_ => <Login />} />
