@@ -125,7 +125,6 @@ class ExerciseList extends Component {
                   color="textSecondary"
                   gutterBottom
                 >
-                  Navbar should come here
                 </Typography>
               </Grid>
               <Grid item xs={12}>
