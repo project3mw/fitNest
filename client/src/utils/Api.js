@@ -6,7 +6,7 @@ const EXERCISE_IMG_URL   = "https://wger.de/api/v2/exerciseimage/?exercise="
 const QUERY_DEFAULTS = "&status=2&language=2"
 const IMAGE_QUERY_DEFAULTS = "&is_main=True"
 
-// Export an object containing methods use for accessing googlebooks API
+// Export an object containing methods use for accessing wger API
 export default {
   // Get Exercise category
   getExerciseCategory: () => {

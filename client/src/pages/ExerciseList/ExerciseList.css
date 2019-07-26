@@ -9,3 +9,7 @@
 }
 
 /* <Typography component="div" style={{ backgroundColor: '#cfe8fc', height: '100vh' }} /> */
+
+.MuiFormControl-root {
+  width: 150px;
+}
