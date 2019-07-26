@@ -70,7 +70,7 @@ class PlanExercises extends Component {
           return (
       <>
         <div style={{ marginTop: '30px' }}>
-          <h1 style={{ textAlign: 'center', color: '#ffffff' }}>My Workout Plans</h1>
+          <h1 style={{ textAlign: 'center', color: '#ffffff' }}>Bulk Up! Exercises</h1>
         </div>
         <div className={classes.plans}>
 
