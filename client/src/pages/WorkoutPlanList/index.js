@@ -1,1 +1,1 @@
-export { default } from './WorkoutPlanList.js'
+export { default } from './WorkoutPlanList2.js'
