@@ -76,6 +76,7 @@ const WorkoutPlanList = _ => {
       focus: muscleState
     })
     planState.handleGetByMuscle('Abs', 'Back')
+    planState.handleGetWorkoutName()
     console.log(planState)
     // Stacks.postPlan(planState)
   }
@@ -102,9 +103,11 @@ const WorkoutPlanList = _ => {
       }))
       .catch(e => console.error(e))
   }
-  // planState.handleGetWorkoutName = _ => {
-  //   planState.workouts.forEach
-  // }
+  planState.handleGetWorkoutName = _ => {
+    let tempArr = []
+    planState.workouts.forEach(wName => tempArr.push(wName))
+    setPlanState({ ...planState, workoutNames: tempArr })
+  }
 
 
   return (
