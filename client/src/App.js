@@ -7,7 +7,7 @@ import Profile from './pages/Profile'
 import TopNav from './components/TopNav'
 import SignUp from './pages/SignUp'
 import './App.css';
-import RegForm from './components/RegForm';
+import RegForm from './components/Regform';
 import NavBar from './components/navbar';
 import { makeStyles } from '@material-ui/core/styles'
 // import Stacks from './utils/Stacks.js'
