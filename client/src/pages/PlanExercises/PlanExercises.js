@@ -208,7 +208,7 @@ Inhale as you reverse the movement and return to the starting position.</p>
               <CardContent className={classes.content}>
                 <Typography component="h5" variant="h5">
                   <b>Bench Press Narrow Grip</b>
-                  <p><b>Intesity:</b>: Intermediate</p>
+                  <p><b>Intesity:</b> Intermediate</p>
           </Typography>
                  <Typography variant="subtitle1" color="textSecondary">
                   <p>Lay down on a bench, the bar is directly over your eyes, the knees form a slight angle and the feet are firmly on the ground. Hold the bar with a narrow grip (around 20cm.). Lead the weight slowly down till the arms are parallel to the floor (elbow: right angle), press then the bar up. When bringing the bar down, don't let it down on your nipples as with the regular bench pressing, but somewhat lower.</p>
