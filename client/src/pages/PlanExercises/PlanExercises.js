@@ -149,20 +149,20 @@ render() {
 
 
 
-
-//     render() {
-//         // {!viewWorkouts ? 
-//             return (
-//                     <>
-//                     <div>
-//                         <h1> {this.state.name} </h1>
-// </div>
-//                     </>
+// {/* 
+// //     render() { */}
+// //         // {!viewWorkouts ? 
+// //             return (
+// //                     <>
+// //                     <div>
+// //                         <h1> {this.state.name} </h1>
+// // </div>
+// //                     </>
 
                         
-//             )
-//     }
-// }
+// //             )
+// //     }
+// // }
 
 export default makeStyles(styles)(PlanExercises)
 //1. test plan route (works on local but is Dean inputting plans?)
