@@ -4,7 +4,6 @@ import Paper from '@material-ui/core/Paper';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Avatar from '@material-ui/core/Avatar';
-import arnold from '../../assets/images/arnold.png'
 import { Link } from 'react-router-dom';
 import axios from 'axios'
 import { makeStyles } from '@material-ui/core/styles';
@@ -17,125 +16,283 @@ import Button from '@material-ui/core/Button';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
-
-const useStyles = makeStyles({
-  card: {
-    maxWidth: 345,
-  },
-  media: {
-    height: 140,
-  },
-});
-
-// export default function MediaCard() {
-//   const classes = useStyles();
-
-class WorkoutPlanList extends Component {
-    state = {
-        name: '',
-        group: '',
-        intensity: '',
-        favorite: '',
-        time: '',
-        description: '',
-        plans: [],
-        userId: '',
-        workoutPlanList: [], 
-        viewWorkouts: false
-        
-    }
-
-        handleViewWorkoutPlan = () => {
-          this.setState(() => ({
-            viewWorkouts: true
-          }))
-        }
-   
-
-    componentWillMount() {
-       axios.get('/plans')
-            // axios.get(`/users/${id}`)
-                    .then(({ data }) => {
-                        console.log(data[0].name)
-                        this.setState({
-                    name: data[0].name,
-                    group: data[0].group, 
-                      intensity: data[0].intensity, 
-                      favorite: data[0].favorite,
-                      workoutPlanList: data[0].workout,
-                      time: data[0].time,
-                      description: data[0].description
-                        })
-                    })
-    }
+import clsx from 'clsx';
+import CardHeader from '@material-ui/core/CardHeader';
+import CardMedia from '@material-ui/core/CardMedia';
+import CardActions from '@material-ui/core/CardActions';
+import Collapse from '@material-ui/core/Collapse';
+import IconButton from '@material-ui/core/IconButton';
+import { red } from '@material-ui/core/colors';
+import FavoriteIcon from '@material-ui/icons/Favorite';
+import ShareIcon from '@material-ui/icons/Share';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import MoreVertIcon from '@material-ui/icons/MoreVert';
+​
+​
+​
+class Profile extends Component {
+  state = {
+    name: '',
+    username: '',
+    email: '',
+    age: '',
+    gender: '',
+    weight: '',
+    gWeight: '',
+    location: '',
+    height: '',
+    fitLevel: '',
+    userId: '',
     
-//     export default function MediaCard() {
-//   const classes = useStyles();
-
-
-render() {
-          if (this.state.viewWorkouts === true) {
-            return <Redirect to='/PlanExercises' />
-          }
-          const { classes } = this.props
-  
-  return (
-    <Card className={classes.card}>
-      <CardActionArea>
-        <CardMedia
-          className={classes.media}
-          image="https://image.flaticon.com/icons/png/512/110/110495.png"
-          title="Barbell"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            {this.state.name}
-            {this.state.focus}
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            {this.state.goal}
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      <CardActions>
-        <Button size="small" color="primary" className={classes.button} onClick={this.handleViewWorkoutPlan}>
-          View Workout Plan
-        </Button>
-       <IconButton aria-label="add to favorites">
-          <FavoriteIcon />
-        </IconButton>
-      </CardActions>
-    </Card>
-  );
+  }
+// let userToken = whateverlocalstorage
+  componentWillMount() {
+      axios.get('/users/5d337eda68e4752249612d36')
+      // axios.get(`/users/${id}`)
+          .then(({ data }) => {
+            this.setState({ 
+                name: data.name, 
+                username: data.username,
+                email: data.email,
+                age: data.age, 
+                gender: data.gender, 
+                height: data.height,
+                weight: data.weight, 
+                gWeight: data.gWeight,
+                fitLevel: data.fitLevel
+            })
+          })
+  }
+​
+​
+  render() {
+      return (
+​
+          
+export default function Profile() {
+ const classes = useStyles();
+ const [expanded, setExpanded] = React.useState(false);
+​
+ function handleExpandClick() {
+  setExpanded(!expanded);
+ }
+​
+ return (
+     <>
+  <Card className={classes.card}>
+   <CardHeader
+    avatar={
+     <Avatar aria-label="Profile" className={classes.avatar}>
+      A
+     </Avatar>
+    }
+    action={
+     <IconButton aria-label="Settings">
+      <MoreVertIcon />
+     </IconButton>
+    }
+    title= "My Profile"
+    subheader="Let's Get Fit!"
+   />
+   <CardMedia
+    className={classes.media}
+    image="../../assets/images/arnold.png"
+    title="Avatar"
+   />
+   <CardContent>
+    <Typography variant="body2" color="textSecondary" component="p">
+    <p>{this.state.name}</p>
+    <p>{this.state.username}</p>
+    <p>{this.state.email}</p>
+​
+    </Typography>
+   </CardContent>
+   <CardActions disableSpacing>
+     <IconButton
+     className={clsx(classes.expand, {
+      [classes.expandOpen]: expanded,
+     })}
+     onClick={handleExpandClick}
+     aria-expanded={expanded}
+     aria-label="Show more"
+    >
+     <ExpandMoreIcon />
+    </IconButton>
+   </CardActions>
+   <Collapse in={expanded} timeout="auto" unmountOnExit>
+    <CardContent>
+     <Typography paragraph>Stats:</Typography>
+     <Typography paragraph>
+      {this.state.age} 
+      {this.state.gender}
+      {this.state.location}
+     </Typography>
+     <Typography paragraph>
+      <h1>Goals:</h1>
+      {this.stage.weight}
+      {this.stage.gWeight}
+     </Typography>
+     <Typography paragraph>
+      <h1>Starting Fitness Level:</h1> 
+      <h3>Advanced<h3>
+     </Typography>
+     </CardContent>
+   </Collapse>
+  </Card>
+ );
+}
+          <Card className={classes.card}>
+   <CardActionArea>
+    <CardMedia
+     className={classes.media}
+     image="https://s3.amazonaws.com/webserver-assets-jackcanfield/wp-content/uploads/2019/01/24194552/visualization-and-motivation.jpg"
+     title="Motivation"
+    />
+    <CardContent>
+     <Typography gutterBottom variant="h5" component="h2">
+      <p>Push yourself, because no one else is going to do it for you.</p>
+     </Typography>
+     </CardContent>
+   </CardActionArea>
+   <CardActions>
+    
+   </CardActions>
+  </Card>
+ );
 }
         
+        
+        
+    
+export default (withStyles)Profile
+Collapse
+
+Katie Lewis [9:21 PM]
+We need the styles from material ui
+
+Gia [9:21 PM]
+okay i took out the expand and icon
+image.png 
 
 
-            
-          
+Katie Lewis [9:33 PM]
+Sorry being bombarded
+:sleepy:
+that should work.. just need to add in styles that material had
+Untitled 
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import Paper from '@material-ui/core/Paper';
+import { withStyles } from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
+import Avatar from '@material-ui/core/Avatar';
+import Button from '@material-ui/core/Button';
+import arnold from '../../assets/images/arnold.png'
+import { Link } from 'react-router-dom';
+import axios from 'axios'
+import CardContent from '@material-ui/core/CardContent';
+import ProfileTop from '../../components/ProfileTop'
+import Typography from '@material-ui/core/Typography';
+// import Stacks from '../../utils/Stacks.js'
+import Card from '@material-ui/core/Card';
+class Profile extends Component {
+ state = {
+  name: '',
+  username: '',
+  email: '',
+  age: '',
+  gender: '',
+  weight: '',
+  gWeight: '',
+  location: '',
+  height: '',
+  fitLevel: '',
+  userId: '',
+ }
+ // let userToken = whateverlocalstorage
+ componentWillMount() {
+  axios.get('/users/5d337eda68e4752249612d36')
+   // axios.get(`/users/${id}`)
+   .then(({ data }) => {
+    this.setState({
+     name: data.name,
+     username: data.username,
+     email: data.email,
+     age: data.age,
+     gender: data.gender,
+     height: data.height,
+     weight: data.weight,
+     gWeight: data.gWeight,
+     fitLevel: data.fitLevel
+    })
+   })
+ }
+ render() {
+  return (
+     <>
+    <Card className={classes.card}>
+     <CardHeader
+      avatar={
+       <Avatar aria-label="Profile" className={classes.avatar}>
+        A
+     </Avatar>
+      }
+      action={
+       <IconButton aria-label="Settings">
+        <MoreVertIcon />
+       </IconButton>
+      }
+      title="My Profile"
+      subheader="Let's Get Fit!"
+     />
+     <CardMedia
+      className={classes.media}
+      image="../../assets/images/arnold.png"
+      title="Avatar"
+     />
+     <CardContent>
+      <Typography variant="body2" color="textSecondary" component="p">
+       <p>{this.state.name}</p>
+       <p>{this.state.username}</p>
+       <p>{this.state.email}</p>
+      </Typography>
+     </CardContent>
+     <CardContent>
+      <Typography paragraph>Method:</Typography>
+      <Typography paragraph>
+       {this.state.age}
+       {this.state.gender}
+       {this.state.location}
+      </Typography>
+      <Typography paragraph>
+       Goals:
+        {this.stage.weight}
+       {this.stage.gWeight}
+      </Typography>
+      <Typography paragraph>
+       Starting Fitness Level:
+      {this.stage.fitLevel}
+      </Typography>
+     </CardContent>
+    </Card>
+    <Card className={classes.card}>
+     <CardActionArea>
+      <CardMedia
+       className={classes.media}
+       image="https://s3.amazonaws.com/webserver-assets-jackcanfield/wp-content/uploads/2019/01/24194552/visualization-and-motivation.jpg"
+       title="Motivation"
+      />
+      <CardContent>
+       <Typography gutterBottom variant="h5" component="h2">
+        <p>Push yourself, because no one else is going to do it for you.</p>
+       </Typography>
+      </CardContent>
+     </CardActionArea>
+    </Card>
+    );
+   }
+           
+  }       
+       
+export default (withStyles)Profile
 
-
-
-
-
-
-
-
-//     render() {
-//         // {!viewWorkouts ? 
-//             return (
-//                     <>
-//                     <div>
-//                         <h1> {this.state.name} </h1>
-// </div>
-//                     </>
-
-                        
-//             )
-//     }
-// }
-
-export default makeStyles(styles)(WorkoutPlanList)
-//1. test plan route (works on local but is Dean inputting plans?)
-//2. Test axios.get('/plans) to render components
-//Test get workout(id hardcode in id) then render component
