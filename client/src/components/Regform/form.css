@@ -1,0 +1,63 @@
+#container {
+  /* border: 0;
+  border-Radius: 3;
+  box-Shadow: 0 3px 5px 2px rgba(255, 105, 135, .3);
+  opacity: '0.8'; */
+  padding: 30px;
+  height: 100vh;
+  width: 100
+}
+#formContainer {
+  background-color: whitesmoke;
+  height: 80vh;
+  width: 300px;
+  color: white;
+  margin-top: auto;
+  /* margin-bottom: auto; */
+  margin: 0 auto;
+  font-size: 12px;
+  text-align: center;
+  overflow: scroll;
+  border-radius: 20px;
+}
+/* #bio  {
+  height: 100px;
+  margin-bottom: 5px;
+  color: black;
+  margin: 0 auto;
+  position: center;
+} */
+#dateOfBirth {
+  margin-top: 0;
+}
+#radioButtons {
+  color: black;
+  font-size: 10px;
+}
+/* #fitnessLevel {
+  margin-top: 0;
+  width: 150px;
+  height: auto
+} */
+/* #zipCode {
+  margin-top: 0px;
+} */
+
+#zipCode {
+  margin-top: 1px
+}
+
+#form-buttons {
+  width: 100%;
+  display: flex;
+  /* flex-direction: row; */
+  position: fixed;
+  bottom: 65px;
+  margin-left: -10px;
+}
+
+/* #greeting {
+  margin-top: -25px;
+  margin-left: 30px;
+  font-size: 30px;
+} */
