@@ -1,5 +1,6 @@
 import React, { useState, useEffect,useRef } from 'react'
 import axios from 'axios'
+import jwt from 'jsonwebtoken'
 
 const Login = _ => {
   const _username = useRef()
@@ -18,6 +19,8 @@ const Login = _ => {
     })
       .then(({ data }) => {
         if (data.isLoggedIn) {
+          const { id } = jwt.verify(data.token, 'fitnest')
+          localStorage.setItem('userId', id)
           localStorage.setItem('token', data.token)
           localStorage.setItem('user', data.user)
           setUserState({ ...userState, isLoggedIn: data.isLoggedIn, user: data.user })

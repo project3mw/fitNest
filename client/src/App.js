@@ -2,17 +2,17 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import Regform from './components/Regform'
 import React, { Component } from 'react'
 import Login from './pages/Login'
-// import WorkoutPlanList from './pages/WorkoutPlanList'
+import WorkoutPlanList from './pages/WorkoutPlanList'
 import Profile from './pages/Profile'
 // import NestList from './pages/NestList'
 // import FriendList from './pages/FriendList'
 // import Create from './pages/Create'
 import ProfileTop from './components/ProfileTop'
-import NavBar from './components/Navbar/NavBar'
-import TopNav from './components/TopNav'
+// import NavBar from './components/Navbar/NavBar'
+// import TopNav from './components/TopNav'
 // import Stacks from './utils/Stacks.js'
 import './App.css';
-import Profile2 from './pages/Profile/Profile2.js'
+// import Profile2 from './pages/Profile/Profile2.js'
 
 class App extends Component {
   // renderRedirect = () =>{
@@ -41,19 +41,19 @@ class App extends Component {
        {/* {this.loggedin ? this.renderRedirect : console.log("not redirecting") } */}
 
 
-          <TopNav />
-          <Profile2/>
+          {/* <TopNav /> */}
+          {/* <Profile2/> */}
       {/* <Route exact path='/' component={Login} />
           <Route path='/Create' component={Create} />
-          <Route path='/NestList' component={NestList} />
-          <Route path='/FriendList' component={FriendList} />
-          <Route path='/WorkoutPlanList' component={WorkoutPlanList} /> */}
+          <Route path='/NestList' component={NestList} /> */}
+          {/* <Route path='/FriendList' component={FriendList} /> */}
+          <Route path='/WorkoutPlanList' component={_ => <WorkoutPlanList />} />
           <Route exact path='/Profile' component={_ => <ProfileTop />} />
           <ProfileTop />
 
       <Regform/>
         <Login/>
-      <NavBar />
+      {/* <NavBar /> */}
         </div>    
       </Router>
 
