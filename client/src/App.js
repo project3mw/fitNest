@@ -42,15 +42,15 @@ class App extends Component {
        {/* {this.loggedin ? this.renderRedirect : console.log("not redirecting") } */}
   <WorkoutPlanList/>
 
-          <TopNav />
-          <Profile2/>
+          {/* <TopNav />
+          <Profile2/> */}
       {/* <Route exact path='/' component={Login} />
           <Route path='/Create' component={Create} />
           <Route path='/NestList' component={NestList} />
           <Route path='/FriendList' component={FriendList} />
           <Route path='/WorkoutPlanList' component={WorkoutPlanList} /> */}
           <Route exact path='/Profile' component={_ => <ProfileTop />} />
-          <ProfileTop />
+         <WorkoutPlanList />
 
       {/* <Regform/> */}
         {/* <Login/> */}

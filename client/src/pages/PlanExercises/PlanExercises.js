@@ -30,7 +30,7 @@ const useStyles = makeStyles({
 // export default function MediaCard() {
 //   const classes = useStyles();
 
-class WorkoutPlanList extends Component {
+class PlanExercises extends Component {
     state = {
         name: '',
         group: '',
@@ -45,7 +45,7 @@ class WorkoutPlanList extends Component {
         
     }
 
-        handleViewWorkoutPlan = () => {
+        handleSubmit = () => {
           this.setState(() => ({
             viewWorkouts: true
           }))
@@ -75,37 +75,66 @@ class WorkoutPlanList extends Component {
 
 render() {
           if (this.state.viewWorkouts === true) {
-            return <Redirect to='/PlanExercises' />
+            return <Redirect to='/WorkoutPlanList' />
           }
           const { classes } = this.props
   
   return (
+      <>
+      <div>
     <Card className={classes.card}>
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image="https://image.flaticon.com/icons/png/512/110/110495.png"
+          image="https://www.thecoastnews.com/wp-content/uploads/2018/06/bigstock-163655366.jpg"
           title="Barbell"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            {this.state.name}
-            {this.state.focus}
+            Burpees
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            {this.state.goal}
+            Jump up, lay down on your chest, do a pushup then jump! Repeat!
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary" className={classes.button} onClick={this.handleViewWorkoutPlan}>
-          View Workout Plan
+        <Button size="small" color="primary" className={classes.button} onClick={this.handleSubmit}>
+          View Workout Plans
         </Button>
        <IconButton aria-label="add to favorites">
           <FavoriteIcon />
         </IconButton>
       </CardActions>
     </Card>
+    </div>
+    <div><Card className={classes.card}>
+      <CardActionArea>
+        <CardMedia
+          className={classes.media}
+          image="https://www.thecoastnews.com/wp-content/uploads/2018/06/bigstock-163655366.jpg"
+          title="Burpee"
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="h2">
+            Cable Woodchoppers
+          </Typography>
+          <Typography variant="body2" color="textSecondary" component="p">
+            Set cable pulley slightly lower than chest height. Keep body facing forward with hips stable. 
+            Grab the pulley handle, fully extend your arms and bring your arms forward and across your body. Hold for 1 second at the end of the movement and slowly return to starting position.
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+      <CardActions>
+        <Button size="small" color="primary" className={classes.button} onClick={this.handleSubmit}>
+          View Workout Plans
+        </Button>
+       <IconButton aria-label="add to favorites">
+          <FavoriteIcon />
+        </IconButton>
+      </CardActions>
+    </Card>
+    </div>
   );
 }
         
@@ -135,7 +164,7 @@ render() {
 //     }
 // }
 
-export default makeStyles(styles)(WorkoutPlanList)
+export default makeStyles(styles)(PlanExercises)
 //1. test plan route (works on local but is Dean inputting plans?)
 //2. Test axios.get('/plans) to render components
 //Test get workout(id hardcode in id) then render component
