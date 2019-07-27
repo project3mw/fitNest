@@ -4,16 +4,16 @@ import React, { Component } from 'react'
 import Login from './pages/Login'
 import ExerciseList from './pages/ExerciseList'
 // import WorkoutPlanList from './pages/WorkoutPlanList'
-import Profile from './pages/Profile'
 // import NestList from './pages/NestList'
 // import FriendList from './pages/FriendList'
 // import Create from './pages/Create'
-import ProfileTop from './components/ProfileTop'
-import NavBar from './components/navbar/NavBar.js'
+import NavBar from './components/navbar/NavBar'
 import TopNav from './components/TopNav'
 // import Stacks from './utils/Stacks.js'
-// import './App.css';
-// import Profile2 from './pages/Profile/Profile2.js'
+import './App.css';
+import Profile from './pages/Profile/Profile.js'
+import WorkoutPlanList from './pages/WorkoutPlanList'
+import PlanExercises from './pages/PlanExercises'
 
 class App extends Component {
   // renderRedirect = () =>{
@@ -27,34 +27,17 @@ class App extends Component {
 
     return (
       <Router>
-        <div>
-          {/* <Regform/> */}
-          {/* <Login/> */}
-          {/* <ExerciseList/> */}
-          {/* <TopNav /> */}
-          {/* <ProfileTop /> */}
+        <div>}
+{/* <Profile /> */}
+<PlanExercises />
           {/* <Route exact path='/regform' component={Regform} /> */}
           <Route exact path='/exerciselist' component={ExerciseList} />
-          {/* <Route exact path='/profiletop' component={ProfileTop} />
-          <Route exact path='/' component={Login}/> */}
-      
-          {/* <Route path='/Create' component={Create} /> */}
-          {/* <Route path='/NestList' component={NestList} /> */}
-          {/* <Route path='/FriendList' component={FriendList} /> */}
-          {/* <Route path='/WorkoutPlanList' component={WorkoutPlanList} /> */} 
-          {/* <Route exact path='/Profile' component={_ => <ProfileTop />} />
-          <ProfileTop />
-          <NavBar /> */}
-          {/* {this.loggedin ? this.renderRedirect : console.log("not redirecting") } */}
-          {/* <Profile2/> */}
-          {/* <Route exact path='/' component={Login} />
-          <Route path='/Create' component={Create} />
-          <Route path='/NestList' component={NestList} />
-          <Route path='/FriendList' component={FriendList} />
-          <Route path='/WorkoutPlanList' component={WorkoutPlanList} /> */}
-          {/* <Route exact path='/Profile' component={_ => <ProfileTop />} />
-          <ProfileTop /> */}
-          {/* <NavBar /> */}
+          {/* <Route exact path='/Profile' component={_ => <Profile />} /> */}
+       
+
+      {/* <Regform/> */}
+        {/* <Login/> */}
+      <NavBar />
         </div>    
       </Router>
 

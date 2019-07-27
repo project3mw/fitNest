@@ -5,7 +5,7 @@ module.exports = (Schema, model) => {
         minlength: 10,
         maxlength: 150
       },
-      user: {
+      creator: {
         type: Schema.Types.ObjectId,
         ref: 'User'
       },

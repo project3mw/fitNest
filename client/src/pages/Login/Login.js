@@ -42,7 +42,7 @@ const Login = _ => {
       .catch(_ => {
         setUserState({ ...userState, isLoggedIn: false, user: '' })
       })
-  }, [])
+  }, [userState])
   return(
     <div>
       <h1>{userState.isLoggedIn ? `Hello ${userState.user}! Welcome to the app!` : 'Please Log In Below.'}</h1>
