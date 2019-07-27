@@ -69,6 +69,7 @@ const useStyles = makeStyles(theme => ({
 // })
 
 const Login = _ => {
+  console.log(_)
   const _username = useRef()
   const _password = useRef()
 
@@ -88,6 +89,7 @@ const Login = _ => {
           localStorage.setItem('token', data.token)
           localStorage.setItem('user', data.user)
           setUserState({ ...userState, isLoggedIn: data.isLoggedIn, user: data.user })
+          _.history.push('/profiletop')
         } else {
           alert('Invalid username or password')
         }
