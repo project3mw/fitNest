@@ -208,18 +208,18 @@ class ExerciseList extends Component {
                     maxWidth: "50%",
                     maxHeight: "50%"
                   }}
-                  alt="complex"
+                  // alt="complex"
                   src={this.state.imgsrc}
                 />
                 {/* </ButtonBase> */}
               </Grid>
-              <Grid item xs={12}>
-                {/* <ButtonBase className={classes.image}> */}
+              {/* <Grid item xs={12}>
+                <ButtonBase className={classes.image}>
                 <button onClick={this.handleSubmit}>
                   Add to my Workout Plan
                 </button>
-                {/* </ButtonBase> */}
-              </Grid>
+                </ButtonBase>
+              </Grid> */}
             </Grid>
           </Container>
           <NavBar />
