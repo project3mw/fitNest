@@ -12,7 +12,7 @@ import Checkbox from '@material-ui/core/Checkbox';
 import { Link } from 'react-router-dom'
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
-// import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
+import Select from '@material-ui/core/Select';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
@@ -24,7 +24,6 @@ import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormHelperText from '@material-ui/core/FormHelperText';
 import FormControl from '@material-ui/core/FormControl';
-import Select from '@material-ui/core/Select';
 import FitnessLevel from '../../components/Regform/components/FitnessLevel/FitnessLevel'
   
     
@@ -77,13 +76,13 @@ import FitnessLevel from '../../components/Regform/components/FitnessLevel/Fitne
               Join the Nest
             </Typography>
             <Grid container justify="flex-end">
-                <Grid item>
+                {/* <Grid item>
                   <Link to='/Login' variant="body2" style={{color: 'white', textDecoration: 'none'}}>
                     {"Sign in"}
                   </Link>
-                </Grid>
+                </Grid> */}
               </Grid>
-            <form className={classes.form} validate>
+            <form className={classes.form} noValidate>
               <Grid container spacing={2}>
                 <Grid item xs={6}>
                   <TextField
@@ -146,6 +145,7 @@ import FitnessLevel from '../../components/Regform/components/FitnessLevel/Fitne
                   />
                   </Grid>
               </Grid>
+              <Link to='/Profile' style={{textDecoration: 'none'}}>
               <Button
                 type="submit"
                 fullWidth
@@ -153,9 +153,9 @@ import FitnessLevel from '../../components/Regform/components/FitnessLevel/Fitne
                 color="secondary"
                 className={classes.submit}
               >
-                Sign Up
-                <Link to='/Profile'/>
+                Create Profile
               </Button>
+              </Link>
             </form>
           </div>
           <Box mt={5}>

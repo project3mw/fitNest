@@ -22,31 +22,22 @@ import WorkoutPlanList2 from './pages/WorkoutPlanList2'
 import TopNav from './components/TopNav'
 // import Stacks from './utils/Stacks.js'
 import './App.css';
-import WorkoutPlanList from './pages/WorkoutPlanList'
 import PlanExercises from './pages/PlanExercises'
+import { Switch } from '@material-ui/core';
 
 
     const App = _ => {
     return (
       <Router>
-        <TopNav />
       <Route exact path='/' component={_ => <Login />} />
       <Route exact path='/Login' component={_ => <Login />} />
       <Route exact path='/SignUp' component={_ => <SignUp />} />
       <Route exact path='/ProfileReg' component={_ => <Regform />} />
       <Route exact path='/Profile' component={_ => <Profile />} />
       <Route exact path='/PlanForm' component={_ => <PlanForm />} />
-      <Route exact path='/exerciselist' component={ExerciseList} />
-      {/* <RegForm/> */}
-       
-        {/* </div>     */}
-{/* <PlanExercises /> */}
-          {/* <Route exact path='/Profile' component={_ => <Profile />} /> */}
-       
-
-      {/* <Regform/> */}
-        {/* <Login/> */}
-      {/* <NavBar />  */}
+      <Route exact path='/Exerciselist' component={_ => <ExerciseList />} />
+      <Route exact path='/WP' component={_ => <WorkoutPlanList2 />} />
+      <Route exact path='/PlanExercises' component={_ => <PlanExercises />} />
       </Router>
   )
   }

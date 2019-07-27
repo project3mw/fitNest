@@ -14,6 +14,7 @@ import { spacing } from "@material-ui/system";
 import Api from "../../utils/Api";
 import Arnold from "../../assets/images/arnold.png";
 import './ExerciseList.css'
+import NavBar from '../../components/navbar'
 
 class ExerciseList extends Component {
   state = {
@@ -117,7 +118,8 @@ class ExerciseList extends Component {
       <>
         <div>
           <Container maxWidth="sm">
-            <Grid container spacing={3} style={{ backgroundColor: "#cfe8fc" }}>
+            <Grid container spacing={3} style={{ backgroundColor: 'white', borderRadius: "20px",
+          marginTop: '40px' }}>
               <Grid item xs={12}>
                 <Typography
                   variant="h4"
@@ -220,6 +222,7 @@ class ExerciseList extends Component {
               </Grid>
             </Grid>
           </Container>
+          <NavBar />
         </div>
       </>
     );
@@ -227,81 +230,3 @@ class ExerciseList extends Component {
 }
 
 export default ExerciseList;
-
-
-        {/* <form>
-        <p>
-          <label htmlFor="name">name</label>
-          <br />
-          <input type="text" name = 'name' value = {this.state.name} onChange = {this.handleChange}/>
-        </p>
-        {this.state.name}
-        <p>
-          <label htmlFor="group">group</label>
-          <br />
-          <input type="text" name = 'group' value = {this.state.group} onChange = {this.handleChange}/>
-        </p>
-        <p>
-          <label htmlFor="intensity">intensity</label>
-          <br />
-          <input type="text" name = 'intensity' value = {this.state.intensity} onChange = {this.handleChange}/>
-        </p>
-        <p>
-          <label htmlFor="description">description</label>
-          <br />
-          <input type="text" name = 'description' value = {this.state.description} onChange = {this.handleChange}/>
-        </p>
-        <p>
-          <button onClick = {this.handleSubmit}>Submit</button>
-        </p>
-        </form> */}
-
-                          {/* <TextField
-                  id="standard-select-Category"
-                  select
-                  label="Exercise Category"
-                  // className={classes.textField}
-                  value="fdsaifdusiafjidasjfudai"
-                  onChange={this.handleCategoryChange}
-                  SelectProps={{
-                    MenuProps: {
-                      marginleft: 2,
-                      margingright: 2,
-                      width: "auto",
-                    },
-                  }}
-                  helperText="Please select Exercise category"
-                  margin="normal"
-                  // value={this.state.group[this.state.name].name}
-                  >
-                  {this.state.group.map(option => (
-                    <MenuItem key={option.id} value={option.id}>
-                      {option.name}
-                    </MenuItem>
-                  ))}
-                </TextField>  */}
-                {/* //////////////////////////////////////////////////////////// */}
-                  {/* //////////////////////////////////////////////////////////// */}
-                  {/* <TextField
-                    id="standard-select-exercise"
-                    select
-                    label="Exercise List"
-                    // className={classes.textField}
-                    // value={this.state.exercise}
-                    onChange={this.handleExerciseListChange}
-                    SelectProps={{
-                      MenuProps: {
-                        marginleft: 2,
-                        margingright: 2,
-                        width: "auto"
-                      }
-                    }}
-                    helperText="Select from list for more Exercise Info"
-                    margin="normal"
-                  >
-                    {this.state.exercise.map(option => (
-                      <MenuItem key={option.id} value={option.id}>
-                        {option.name}
-                      </MenuItem>
-                    ))}
-                  </TextField> */}

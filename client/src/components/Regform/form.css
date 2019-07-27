@@ -1,5 +1,8 @@
 .MuiGrid-root .MuiGrid-container .MuiGrid-spacing-xs-3 {
-  background-color: red;
+  background-color: white;
+}
+html {
+  background-color: #2B384B;
 }
 #container {
   /* border: 0;
