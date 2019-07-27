@@ -9,3 +9,67 @@ height: 100vh;
 html {
   background-color: #2B384B;
 }
+body {
+  font-family: "Roboto", "Helvetica", "sans-serif";
+}
+
+
+/* Login, SignUp, RegForm*/
+input.MuiInputBase-input.MuiOutlinedInput-input {
+  color: #FFE6D0 !important;
+  /* background-color: white */
+}
+label.MuiFormLabel-root.MuiInputLabel-root.MuiInputLabel-formControl.MuiInputLabel-animated.MuiInputLabel-outlined.Mui-required.Mui-required {
+  color: #FFE6D0 !important;
+}
+/* fieldset.PrivateNotchedOutline-root-114.MuiOutlinedInput-notchedOutline {
+  border-color: #FFE6D0 !important;
+} */
+.makeStyles-nb-74 {
+  color: white;
+  width: 100%;
+  bottom: 0;
+  position: fixed;
+  background-color: #ffd045;
+  background-image: linear-gradient(315deg, #ffd045 0%, #d14545 74%);
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  margin-right: 0px;
+  margin-left: -43px;
+}
+.makeStyles-nb-69 {
+  color: white;
+  width: 100%;
+  bottom: 0;
+  position: fixed;
+  background-color: #ffd045;
+  background-image: linear-gradient(315deg, #ffd045 0%, #d14545 74%);
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  margin-right: 0px;
+  margin-left: -43px;
+}
+.makeStyles-nb-110 {
+  color: white;
+  width: 100%;
+  bottom: 0;
+  position: fixed;
+  background-color: #ffd045;
+  background-image: linear-gradient(315deg, #ffd045 0%, #d14545 74%);
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  margin-right: 0px;
+  margin-left: -43px;
+}
+nav.MuiBottomNavigation-root {
+  color: white;
+  width: 100%;
+  bottom: 0;
+  position: fixed;
+  background-color: #ffd045;
+  background-image: linear-gradient(315deg, #ffd045 0%, #d14545 74%);
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  margin-right: 0px;
+  margin-left: -43px;
+}

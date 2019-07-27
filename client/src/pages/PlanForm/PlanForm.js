@@ -1,21 +1,47 @@
 import React, { useState } from 'react'
-// import Stacks from '../../utils'
+import Button from '@material-ui/core/Button';
 import { makeStyles, useTheme } from '@material-ui/core/styles'
 import Input from '@material-ui/core/Input'
 import InputLabel from '@material-ui/core/InputLabel'
 import MenuItem from '@material-ui/core/MenuItem'
 import FormControl from '@material-ui/core/FormControl'
 import Select from '@material-ui/core/Select'
+import NavBar from '../../components/navbar'
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles(theme => ({
-  root: {
-    display: 'flex',
-    flexWrap: 'wrap',
+  container: {
+    backgroundColor: 'white',
+    justifyContent: 'center',
+    // display: 'flex',
+    borderRadius: '20px',
+    width: '80%',
+    margin: '0 auto',
+    padding: '10px',
+    marginTop: '150px',
+    // display: 'grid',
+    // margin: '0 auto',
+    // marginHorizontal: '50px',
+    // alignContent: 'center',
+    // width: '100%',
+
   },
+  // nav: {
+    
+  //   display: 'flex',
+  //   width: 'auto', 
+  // },
+  // formRoot: {
+  //   display: 'flex',
+  //   flexWrap: 'wrap',
+  //   margin: '0 auto',
+  //   marginHorizontal: '50px',
+  // },
   formControl: {
     margin: theme.spacing(1),
     minWidth: 120,
     maxWidth: 300,
+    display: 'flex'
   }
 }))
 
@@ -134,7 +160,7 @@ const PlanForm = _ => {
 
 
   return (
-    <div>
+    <div className={classes.container}>
       <p>
         <label htmlFor="name">Workout Plan Name:</label>
         <br />
@@ -142,12 +168,15 @@ const PlanForm = _ => {
           type="text"
           name="name"
           onChange={planState.handleOnChange}
-          placeholder="Monday, Tuesday, etc.."
+          placeholder="Bulk Up or Shut Up!"
           value={planState.name}
+          style={{backgroundColor:'transparent', border: 'none'}}
+
+
         />
       </p>
       <p>
-      <div className={classes.root}>
+      <div className={classes.formRoot}>
         <FormControl className={classes.formControl}>
           <InputLabel htmlFor="select-multiple">Focus:</InputLabel>
           <Select
@@ -167,7 +196,7 @@ const PlanForm = _ => {
         </div>
       </p>
       <p>
-      <div className={classes.root}>
+      <div className={classes.formRoot}>
         <FormControl className={classes.formControl}>
           <InputLabel htmlFor="select-multiple">Exercises:</InputLabel>
           <Select
@@ -193,16 +222,26 @@ const PlanForm = _ => {
           type="text"
           name="goal"
           onChange={planState.handleOnChange}
-          placeholder="Cut, Bulk, General, etc.."
+          placeholder="Cut, Bulk, General"
           value={planState.goal}
         />
       </p>
       <p>
-        <button onClick={planState.handleCreatePlan}>
+      <Link to='/WP' style={{textDecoration: 'none'}}>
+        <Button
+        type="submit"
+        fullWidth
+        variant="contained"
+        // color="secondary"
+        className={classes.submit}
+        >
           Create Workout Plan
-        </button>
+          </Button>
+        </Link>
       </p>
-    </div>
+
+<NavBar />
+     </div>
   )
 }
 

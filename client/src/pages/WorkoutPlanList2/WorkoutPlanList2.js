@@ -16,11 +16,14 @@ import LaunchIcon from '@material-ui/icons/Launch';
 import { CardActions } from '@material-ui/core';
 import IconButton from '@material-ui/core/IconButton';
 import { Redirect } from 'react-router-dom';
+import Grid from '@material-ui/core/Grid';
+import NavBar from '../../components/navbar';
 
 
 const styles = theme => ({
   card: {
     display: 'flex',
+    borderRadius: '20px'
   },
   details: {
     display: 'flex',
@@ -32,7 +35,7 @@ const styles = theme => ({
 
   },
   cover: {
-    width: 150,
+    width: '200',
   },
   plans: {
     marginLeft: "40px",
@@ -66,7 +69,7 @@ const styles = theme => ({
           return (
       <>
         <div style={{ marginTop: '30px' }}>
-          <h1 style={{ textAlign: 'center', color: '#707070' }}>My Workout Plans</h1>
+          <h1 style={{ textAlign: 'center', color: '#FFE6D0' }}>My Workout Plans</h1>
         </div>
         <div className={classes.plans}>
 
@@ -96,6 +99,7 @@ const styles = theme => ({
           </CardActions>
           </Card>
           <br />
+ <Grid item xs={12}>
  <Card className={classes.card}>
             <div className={classes.details}>
               <CardContent className={classes.content}>
@@ -118,6 +122,7 @@ const styles = theme => ({
             <IconButton aria-label="View Workouts">
           <LaunchIcon /></IconButton></CardActions>
           </Card>
+        </Grid>
           <br />
           <Card className={classes.card}>
             <div className={classes.details}>
@@ -195,6 +200,7 @@ const styles = theme => ({
           </Card>
           */}
         </div >
+        <NavBar />
       </>
 
     )

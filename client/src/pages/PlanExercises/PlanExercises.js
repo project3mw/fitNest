@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import Button from '@material-ui/core/Button'
 import Card from '@material-ui/core/Card'
+import NavBar from '../../components/navbar'
 import { withStyles } from '@material-ui/core/styles'
 import CardHeader from '@material-ui/core/CardHeader'
 import CardContent from '@material-ui/core/CardContent';
@@ -25,6 +26,7 @@ import benchpress from '../../assets/images/benchpress.jpg';
 const styles = theme => ({
   card: {
     display: 'flex',
+    borderRadius: '20px'
   },
   details: {
     display: 'flex',
@@ -222,6 +224,7 @@ Inhale as you reverse the movement and return to the starting position.</p>
             />
                </Card>
          </div>       
+         <NavBar />
       </>
 
     )

@@ -23,7 +23,7 @@ const RadioButtons = (props) => {
   return (
     <div id='buttons' className={styles.radioRoot}>
       <FormControl component='fieldset' className={styles.formControlRb}>
-        <FormLabel component='legend'>Gender</FormLabel>
+        <FormLabel component='legend'></FormLabel>
         <RadioGroup
           aria-label='Gender'
           key='radioButton1'

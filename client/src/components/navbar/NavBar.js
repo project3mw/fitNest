@@ -7,6 +7,7 @@ import PersonIcon from "@material-ui/icons/Person";
 // import BubbleChartIcon from "@material-ui/icons/BubbleChart";
 // import ListIcon from "@material-ui/icons/List";
 import ClassIcon from "@material-ui/icons/Class";
+import MenuIcon from "@material-ui/icons/Menu";
 // import PersonAddIcon from "@material-ui/icons/PersonAdd";
 // import AddIcon from "@material-ui/icons/Add";
 // import Fab from '@material-ui/core/Fab';
@@ -16,6 +17,7 @@ import DirectionsRunIcon from '@material-ui/icons/DirectionsRun'
 
 const useStyles = makeStyles({
   nb: {
+    display: 'flex',
     width: '100%',
     backgroundColor: '#ffd045',
     backgroundImage: 'linear-gradient(315deg, #ffd045 0%, #d14545 74%)',
@@ -65,12 +67,17 @@ function NavBar() {
         icon={<PersonIcon />}
       />
       </Link>
-      <Link to='/Create'>
+      <Link to='/ExerciseList'>
       <BottomNavigationAction label='Workouts' value='workouts'
         style={{color: 'white'}} icon={<DirectionsRunIcon />}
         />
         </Link>
-      <Link to='/WorkoutPlanList'>
+        <Link to='/PlanForm'>
+      <BottomNavigationAction label='eForm' value='eForm'
+        style={{color: 'white'}} icon={<MenuIcon />}
+        />
+        </Link>
+      <Link to='/WP'>
       <BottomNavigationAction
         label="Plan" style={{color: 'white'}} size={50}
         // value="wp"
