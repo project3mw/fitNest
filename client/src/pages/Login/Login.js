@@ -2,6 +2,7 @@ import React, { useState, useEffect,useRef } from 'react'
 // import { withStyles } from '@material-ui/styles'
 import Button from '@material-ui/core/Button'
 import axios from 'axios'
+import jwt from 'jsonwebtoken'
 // import Avatar from '@material-ui/core/Avatar';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
@@ -86,6 +87,8 @@ const Login = _ => {
     })
       .then(({ data }) => {
         if (data.isLoggedIn) {
+          const { id } = jwt.verify(data.token, 'fitnest')
+          localStorage.setItem('userId', id)
           localStorage.setItem('token', data.token)
           localStorage.setItem('user', data.user)
           setUserState({ ...userState, isLoggedIn: data.isLoggedIn, user: data.user })

@@ -295,4 +295,3 @@ class Profile extends Component {
   }       
        
 export default (withStyles)Profile
-

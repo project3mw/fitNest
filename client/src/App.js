@@ -16,6 +16,7 @@ import ExerciseList from './pages/ExerciseList'
 // import NestList from './pages/NestList'
 // import FriendList from './pages/FriendList'
 // import Create from './pages/Create'
+import PlanForm from './pages/PlanForm'
 // import Profile2 from './pages/Profile/Profile2.js'
 import WorkoutPlanList2 from './pages/WorkoutPlanList2'
 import NavBar from './components/navbar/NavBar'
@@ -25,6 +26,7 @@ import './App.css';
 import Profile from './pages/Profile/Profile.js'
 import WorkoutPlanList from './pages/WorkoutPlanList'
 import PlanExercises from './pages/PlanExercises'
+
 
 class App extends Component {
   // renderRedirect = () =>{
@@ -53,6 +55,7 @@ class App extends Component {
       <Route exact path='/SignUp' component={_ => <SignUp />} />
       <Route exact path='/ProfileReg' component={_ => <Regform />} />
       <Route exact path='/Profile' component={_ => <Profile />} />
+      <Route exact path='/PlanForm' component={_ => <PlanForm />} />
       {/* <RegForm/> */}
        
         {/* </div>     */}
