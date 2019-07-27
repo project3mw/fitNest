@@ -16,6 +16,7 @@ import ExerciseList from './pages/ExerciseList'
 // import NestList from './pages/NestList'
 // import FriendList from './pages/FriendList'
 // import Create from './pages/Create'
+import PlanForm from './pages/PlanForm'
 // import Profile2 from './pages/Profile/Profile2.js'
 import WorkoutPlanList2 from './pages/WorkoutPlanList2'
 import TopNav from './components/TopNav'
@@ -34,9 +35,18 @@ import PlanExercises from './pages/PlanExercises'
       <Route exact path='/SignUp' component={_ => <SignUp />} />
       <Route exact path='/ProfileReg' component={_ => <Regform />} />
       <Route exact path='/Profile' component={_ => <Profile />} />
-      {/* <PlanExercises /> */}
+      <Route exact path='/PlanForm' component={_ => <PlanForm />} />
       <Route exact path='/exerciselist' component={ExerciseList} />
-      {/* <NavBar /> */}
+      {/* <RegForm/> */}
+       
+        {/* </div>     */}
+<PlanExercises />
+          {/* <Route exact path='/Profile' component={_ => <Profile />} /> */}
+       
+
+      {/* <Regform/> */}
+        {/* <Login/> */}
+      {/* <NavBar />  */}
       </Router>
   )
   }
