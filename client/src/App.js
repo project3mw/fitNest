@@ -13,6 +13,7 @@ import ProfileTop from './components/ProfileTop'
 // import Stacks from './utils/Stacks.js'
 import './App.css';
 // import Profile2 from './pages/Profile/Profile2.js'
+import PlanForm from './pages/PlanForm'
 
 class App extends Component {
   // renderRedirect = () =>{
@@ -47,7 +48,8 @@ class App extends Component {
           <Route path='/Create' component={Create} />
           <Route path='/NestList' component={NestList} /> */}
           {/* <Route path='/FriendList' component={FriendList} /> */}
-          <Route path='/WorkoutPlanList' component={_ => <WorkoutPlanList />} />
+          {/* <Route path='/WorkoutPlanList' component={_ => <WorkoutPlanList />} /> */}
+          <Route path='/planform' component={_ => <PlanForm />} />
           <Route exact path='/Profile' component={_ => <ProfileTop />} />
           <ProfileTop />
 
