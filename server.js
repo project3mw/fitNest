@@ -8,6 +8,8 @@ const {User} = require('./models')
 const app = express()
 require("dotenv").config()
 
+let PORT = process.env.PORT || 3001
+
 app.use(express.static(join(__dirname, 'client', 'build')))
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
@@ -44,7 +46,7 @@ app.get('*', (req, res) => res.sendFile(join(__dirname, 'client', 'build')))
 require('mongoose').connect(MONGODB_URI, { useNewUrlParser: true, useCreateIndex: true, useFindAndModify: true })
  .then(_ => {
    console.log("database connected")
-   app.listen(3001, () => console.log('server listening on port: 3001'))
+   app.listen(PORT, () => console.log(`server listening on port: ${PORT}`))
  })
  .catch(function(err) {
  console.log(err.message);
