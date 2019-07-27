@@ -4,10 +4,10 @@ import Login from './pages/Login'
 import Profile from './pages/Profile'
 // import Logo from './assets/images/nest.svg'
 // import ProfileTop from './components/ProfileTop'
-import TopNav from './components/TopNav'
+// import TopNav from './components/TopNav'
 import SignUp from './pages/SignUp'
 import './App.css';
-import RegForm from './components/RegForm';
+import Regform from './components/Regform'
 import NavBar from './components/navbar';
 import { makeStyles } from '@material-ui/core/styles'
 // import Stacks from './utils/Stacks.js'
@@ -16,12 +16,13 @@ import { makeStyles } from '@material-ui/core/styles'
 // import FriendList from './pages/FriendList'
 // import Create from './pages/Create'
 // import Profile2 from './pages/Profile/Profile2.js'
+import WorkoutPlanList2 from './pages/WorkoutPlanList2'
 
     const App = _ => {
     return (
       
       <Router>
-        <div>
+        {/* <div> */}
 
          
        {/* {this.loggedin ? this.renderRedirect : console.log("not redirecting") } */}
@@ -29,16 +30,15 @@ import { makeStyles } from '@material-ui/core/styles'
 
           {/* <TopNav /> */}
       
-
+          {/* <WorkoutPlanList2 /> */}
       <Route exact path='/' component={_ => <Login />} />
       <Route exact path='/Login' component={_ => <Login />} />
       <Route exact path='/SignUp' component={_ => <SignUp />} />
-      <Route exact path='/ProfileReg' component={_ => <RegForm />} />
+      <Route exact path='/ProfileReg' component={_ => <Regform />} />
       <Route exact path='/Profile' component={_ => <Profile />} />
-<NavBar />
-      {/* <Regform/> */}
-      
-        </div>    
+      {/* <RegForm/> */}
+       
+        {/* </div>     */}
       </Router>
 
     )

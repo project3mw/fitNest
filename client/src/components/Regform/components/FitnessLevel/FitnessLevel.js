@@ -10,23 +10,25 @@ import FormControl from '@material-ui/core/FormControl'
 import Select from '@material-ui/core/Select'
 import './fitnessLevel.css'
 
-const styles = theme => ({
-  rootFitness: {
-    display: 'flex',
-    flexWrap: 'wrap'
-  },
-  formControlfitlevel: {
-    margin: theme.spacing(1),
-    minWidth: 120
-  },
-  selectEmpty: {
-    marginTop: theme.spacing(2)
-  }
-})
+
+// const useStyles = makeStyles =({
+//   rootFitness: {
+//     display: 'flex',
+//     flexWrap: 'wrap'
+//   },
+//   formControlfitlevel: {
+//     margin: theme.spacing(1),
+//     minWidth: 120
+//   },
+//   selectEmpty: {
+//     marginTop: theme.spacing(2)
+//   }
+
+// })
 
 const FitnessLevel = (props) => {
   return (
-    <FormControl id='fitlevel' className={styles.formControlFitness}>
+    <FormControl id='fitlevel'>
       <InputLabel htmlFor='fitness-level'>Fitness level</InputLabel>
       <Select
         key='fitnessLevel'
