@@ -167,7 +167,7 @@ const PlanForm = _ => {
         </div>
       </p>
       <p>
-      <div className={classes.root}>
+      <div className={classes.formRoot}>
         <FormControl className={classes.formControl}>
           <InputLabel htmlFor="select-multiple">Exercises:</InputLabel>
           <Select

@@ -9,3 +9,16 @@ height: 100vh;
 html {
   background-color: #2B384B;
 }
+
+
+/* Login, SignUp, RegForm*/
+input.MuiInputBase-input.MuiOutlinedInput-input {
+  color: #FFE6D0 !important;
+  /* background-color: white */
+}
+label.MuiFormLabel-root.MuiInputLabel-root.MuiInputLabel-formControl.MuiInputLabel-animated.MuiInputLabel-outlined.Mui-required.Mui-required {
+  color: #FFE6D0 !important;
+}
+/* fieldset.PrivateNotchedOutline-root-114.MuiOutlinedInput-notchedOutline {
+  border-color: #FFE6D0 !important;
+} */

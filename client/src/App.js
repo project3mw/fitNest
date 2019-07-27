@@ -40,7 +40,7 @@ import PlanExercises from './pages/PlanExercises'
       {/* <RegForm/> */}
        
         {/* </div>     */}
-<PlanExercises />
+{/* <PlanExercises /> */}
           {/* <Route exact path='/Profile' component={_ => <Profile />} /> */}
        
 
