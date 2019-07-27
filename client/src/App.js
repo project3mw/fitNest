@@ -1,65 +1,48 @@
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
-import Regform from './components/Regform'
 import React, { Component } from 'react'
 import Login from './pages/Login'
-// import WorkoutPlanList from './pages/WorkoutPlanList'
 import Profile from './pages/Profile'
+// import Logo from './assets/images/nest.svg'
+// import ProfileTop from './components/ProfileTop'
+// import TopNav from './components/TopNav'
+import SignUp from './pages/SignUp'
+import './App.css';
+import Regform from './components/Regform'
+import NavBar from './components/navbar';
+import { makeStyles } from '@material-ui/core/styles'
+// import Stacks from './utils/Stacks.js'
+// import WorkoutPlanList from './pages/WorkoutPlanList'
 // import NestList from './pages/NestList'
 // import FriendList from './pages/FriendList'
 // import Create from './pages/Create'
-import ProfileTop from './components/ProfileTop'
-import NavBar from './components/Navbar/NavBar'
-import TopNav from './components/TopNav'
-// import Stacks from './utils/Stacks.js'
-import './App.css';
-import Profile2 from './pages/Profile/Profile2.js'
+// import Profile2 from './pages/Profile/Profile2.js'
+import WorkoutPlanList2 from './pages/WorkoutPlanList2'
 
-class App extends Component {
-  // renderRedirect = () =>{
-  //   console.log("Redirecting")
-    //Redirect to
-  // }
-  render () {
-    // Stacks.getStacks()
-    // .then(({ data }) => console.log(data))
-    // .catch(e=> console.error(e))
-
+    const App = _ => {
     return (
       
       <Router>
-        <div>
+        {/* <div> */}
 
-          {/* <TopNav /> */}
-       {/* <Route exact path='/' component={Login} /> */}
-          {/* <Route path='/Create' component={Create} /> */}
-          {/* <Route path='/NestList' component={NestList} /> */}
-          {/* <Route path='/FriendList' component={FriendList} /> */}
-          {/* <Route path='/WorkoutPlanList' component={WorkoutPlanList} /> */} 
-          {/* <Route exact path='/Profile' component={_ => <ProfileTop />} />
-          <ProfileTop />
-        <NavBar /> */}
+         
        {/* {this.loggedin ? this.renderRedirect : console.log("not redirecting") } */}
 
 
-          <TopNav />
-          <Profile2/>
-      {/* <Route exact path='/' component={Login} />
-          <Route path='/Create' component={Create} />
-          <Route path='/NestList' component={NestList} />
-          <Route path='/FriendList' component={FriendList} />
-          <Route path='/WorkoutPlanList' component={WorkoutPlanList} /> */}
-          <Route exact path='/Profile' component={_ => <ProfileTop />} />
-          <ProfileTop />
-
-      <Regform/>
-        <Login/>
-        
-        </div>    
+          {/* <TopNav /> */}
+      
+          {/* <WorkoutPlanList2 /> */}
+      <Route exact path='/' component={_ => <Login />} />
+      <Route exact path='/Login' component={_ => <Login />} />
+      <Route exact path='/SignUp' component={_ => <SignUp />} />
+      <Route exact path='/ProfileReg' component={_ => <Regform />} />
+      <Route exact path='/Profile' component={_ => <Profile />} />
+      {/* <RegForm/> */}
+       
+        {/* </div>     */}
       </Router>
 
     )
   }
-}
 export default App
 
 

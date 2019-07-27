@@ -1,6 +1,5 @@
 import React from "react";
-import { Link } from 'react-router-dom'
-;
+import { Link } from 'react-router-dom';
 import { makeStyles } from "@material-ui/core/styles";
 import BottomNavigation from "@material-ui/core/BottomNavigation";
 import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
@@ -18,29 +17,15 @@ import DirectionsRunIcon from '@material-ui/icons/DirectionsRun'
 const useStyles = makeStyles({
   nb: {
     width: '100%',
-    // backgroundColor: '#FF8C00',
-//     backgroundColor: '#ea2027',
-// backgroundImage: 'linear-gradient(315deg, #ea2027 0%, #ee5a24 74%)',
-backgroundColor: '#ffd045',
-backgroundImage: 'linear-gradient(315deg, #ffd045 0%, #d14545 74%)',
-// backgroundColor: '#ffcb43',
-// backgroundImage: 'linear-gradient(319deg, #ffcb43 0%, #ff6425 37%, #ff0016 100%)',
-
-
-    // backgroundColor: 'transparent',
-    // backgroundColor: '#990000',
-    // backgroundImage: 'linear-gradient(147deg, #990000 0%, #ff0000 74%)',
-    // backgroundColor: '#f39f86',
-    // backgroundImage: 'linear-gradient(315deg, #f39f86 0%, #f9d976 74%)',
-    
-    // backgroundColor: '#4B0082',
-    // backgroundImage: 'linear-gradient(316deg, #6c33a3 0%, #8241b8 74%)',
+    backgroundColor: '#ffd045',
+    backgroundImage: 'linear-gradient(315deg, #ffd045 0%, #d14545 74%)',
     color: 'white',
     position: 'fixed',
     bottom: 0,
     borderTopLeftRadius: '30px',
     borderTopRightRadius: '30px',
-    
+    // margin: '0 auto',
+    // marginLeft: '-8px'   
   },
   fabButton: {
     position: 'absolute',
@@ -50,9 +35,7 @@ backgroundImage: 'linear-gradient(315deg, #ffd045 0%, #d14545 74%)',
     right: 0,
     margin: '0 auto',
     backgroundColor: '#FFE6D0',
-    // backgroundColor: '#990000',
-    // backgroundImage: 'linear-gradient(147deg, #990000 0%, #ff0000 74%)',
-    color: 'grey',
+    // color: 'grey',
   },
 });
 
@@ -60,9 +43,9 @@ function NavBar() {
   const classes = useStyles();
   const [value, setValue] = React.useState("recents");
 
-  function handleChange(event, newValue) {
-    setValue(newValue);
-  }
+  // function handleChange(event, newValue) {
+  //   setValue(newValue);
+  // }
 
   return (
     <div>
@@ -96,7 +79,7 @@ function NavBar() {
       </Link>
 
 
-        <Link to='/'>
+        <Link to='/Login'>
         <BottomNavigationAction label='Sign Out' value='signout'
         style={{color: 'white'}} icon={<MeetingRoomIcon />}
         />

@@ -1,112 +1,77 @@
-// import React from 'react';
-// import PropTypes from 'prop-types';
-// import Paper from '@material-ui/core/Paper';
-// import { withStyles } from '@material-ui/core/styles';
-// import Grid from '@material-ui/core/Grid';
-// import Avatar from '@material-ui/core/Avatar';
-// import Button from '@material-ui/core/Button';
-// import arnold from '../../assets/images/arnold.png'
-// import { Link } from 'react-router-dom';
-// import Axios from 'axios';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import Paper from '@material-ui/core/Paper';
+import { withStyles } from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
+import Avatar from '@material-ui/core/Avatar';
+import Button from '@material-ui/core/Button';
+import arnold from '../../assets/images/arnold.png'
+import { Link } from 'react-router-dom';
+import axios from 'axios'
+import CardContent from '@material-ui/core/CardContent';
+import ProfileTop from '../../components/ProfileTop'
+import Typography from '@material-ui/core/Typography';
+import NavBar from '../../components/navbar'
+// import Stacks from '../../utils/Stacks.js'
 
 
 
-// function Profile() {
-//         const classes = useStyles();
-//         const [value, setValue] = React.useState("recents");
-        
-// class Profile extends Component {
-//     state = {
-//             name: '',
-//             weight: '',
-//             age: '',
-//             description: '',
-//             // need to get exact id for login button
-//             // do i have to define this as a variable above?
-//             // userid: localStorage.getItem('userLogin'),
-//             userId: '',
-//             workoutPlanList: [], 
-//             nestList: []
-//     }
-//     componentWillMount() {
-//             axios.get('/users/:i')
-//                     .then(({ data }) => {
-//                             this.setState({ workoutPlanList: data })
-//                     })
-//     }
+class Profile extends Component {
+    state = {
+        name: '',
+        username: '',
+        email: '',
+        age: '',
+        gender: '',
+        weight: '',
+        gWeight: '',
+        location: '',
+        height: '',
+        fitLevel: '',
+        userId: '',
+       
+    }
+// let userToken = whateverlocalstorage
+    componentWillMount() {
+            axios.get('/users/')
+            // axios.get(`/users/${id}`)
+                    .then(({ data }) => {
+                        this.setState({ 
+                                name: data.name, 
+                                username: data.username,
+                                email: data.email,
+                                age: data.age, 
+                                gender: data.gender, 
+                                height: data.height,
+                                weight: data.weight, 
+                                gWeight: data.gWeight,
+                                fitLevel: data.fitLevel
+                        })
+                    })
+    }
 
 
-//     handleGetOccasions = event => {
-//             const userId = this.state.userId
-//             console.log("Here I am!")
-//             workoutPlanList.getAll()
-//     }
+    render() {
+            return (
+                    <>
+                            {/* <div> */}
+                                    {/* <TopNav /> */}
+                                    {/* {this.state.}     */}
+                                    {/* <OccList /> */}
+                                    {/* <BottomNav /> */}
+                            {/* </div> */}
+                           
+                            <CardContent>
+        <Typography variant="body2" color="textSecondary" component="p">
+          This person name is {this.state.name}.
+          Age is {this.state.age}
+        </Typography>
+      </CardContent>
+      {/* <NavBar /> */}
+                    </>
 
-//     handleSelectImage = (type) => {
-//             switch ({ type }) {
-//                     case 'birthday':
-//                             console.log('birthday')
-//                             this.document.CardMedia.style.backgroundImage = "url('./assets/images/balloons.png"
-//                             break
-//                     case 'wedding':
-//                             console.log('wedding')
-//                             this.document.CardMedia.style.backgroundImage = "url('./assets/images/wedding.jpg"
-//                             break
-//                     case 'valentines':
-//                             console.log('valentines')
-//                             document.body.style.backgroundImage = "url('./assets/images/valentines.jpg"
-//                             break
-//                     case 'baby':
-//                             console.log('baby')
-//                             document.body.style.backgroundImage = "url('./assets/images/balloons.png"
-//                             break
-//                     case 'because':
-//                             console.log('because')
-//                             document.body.style.backgroundImage = "url('./assets/images/balloons.png"
-//                             break
-//             }
-//     }
+            )
+    }
 
-//     handleStorage = ({ id, name, type, date, description }) => {
-//             let cardData = { id, name, type, date, description }
-//             localStorage.setItem('update', JSON.stringify(cardData))
-//             this.setState({ ...this.state, currentCard: cardData, isEditing: true })
-//             console.log(cardData)
-//         }
-    
-
-//     handleDeleteWorkoutPlan = (id) => {
-//             console.log('Here I am!')
-//             workoutPlanList.deleteOne(id)
-//                     .then(({ data }) => {
-//                             this.setState({
-//                                 workoutPlanList: this.state.workoutPlanList.filter(workoutPlan => workoutPlan.id !== id)
-//                             })
-//                     })
-//     }
-
-
-//     render() {
-//             return (
-//                     <>
-//                             <div>
-//                                     {/* <TopNav /> */}
-//                                     <ProfileTop />
-//                                     {/* <OccList /> */}
-//                                     <BottomNav />
-//                             </div>
-//                             {this.state.isEditing ? <EditForm currentworkoutPlan={this.state.currentCard} /> : null}
-//                             <OccCard
-//                                     newworkoutplan={this.state.workoutPlanList}
-//                                     handleSelectChange={this.state.type}
-//                                     handleStorage={this.handleStorage}
-//                                     handleDeleteWorkoutPlan={this.handleDeleteWorkoutPlan}
-//                             />
-//                     </>
-//         );
-//     }
-
-// }
-
-
-// export default Profile
+}
+export default Profile
