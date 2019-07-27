@@ -23,6 +23,7 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import RadioButtons from '../../components/Regform/components/radiobuttons/radiobuttons'
 import FitnessLevel from '../../components/Regform/components/FitnessLevel/FitnessLevel'
+import './signup.css'
 
 // const useStyles = makeStyles(theme => ({
 //   '@global': {
