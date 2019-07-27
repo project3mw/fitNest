@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import Regform from './components/Regform'
 import React, { Component } from 'react'
 import Login from './pages/Login'
+import ExerciseList from './pages/ExerciseList'
 // import WorkoutPlanList from './pages/WorkoutPlanList'
 // import NestList from './pages/NestList'
 // import FriendList from './pages/FriendList'
@@ -25,30 +26,12 @@ class App extends Component {
     // .catch(e=> console.error(e))
 
     return (
-      
       <Router>
-        <div>
+        <div>}
 {/* <Profile /> */}
 <PlanExercises />
-          {/* <TopNav /> */}
-       {/* <Route exact path='/' component={Login} /> */}
-          {/* <Route path='/Create' component={Create} /> */}
-          {/* <Route path='/NestList' component={NestList} /> */}
-          {/* <Route path='/FriendList' component={FriendList} /> */}
-          {/* <Route path='/WorkoutPlanList' component={WorkoutPlanList} /> */} 
-          {/* <Route exact path='/Profile' component={_ => <ProfileTop />} />
-          <ProfileTop />
-        <NavBar /> */}
-       {/* {this.loggedin ? this.renderRedirect : console.log("not redirecting") } */}
-  {/* <WorkoutPlanList2 /> */}
-
-          {/* <TopNav />
-          <Profile2/> */}
-      {/* <Route exact path='/' component={Login} />
-          <Route path='/Create' component={Create} />
-          <Route path='/NestList' component={NestList} />
-          <Route path='/FriendList' component={FriendList} />
-          <Route path='/WorkoutPlanList' component={WorkoutPlanList} /> */}
+          {/* <Route exact path='/regform' component={Regform} /> */}
+          <Route exact path='/exerciselist' component={ExerciseList} />
           {/* <Route exact path='/Profile' component={_ => <Profile />} /> */}
        
 
